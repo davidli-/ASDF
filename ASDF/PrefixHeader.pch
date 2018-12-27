@@ -1,0 +1,12 @@
+//
+//  PrefixHeader.pch
+//  ASDF
+//
+//  Created by Macmafia on 2017/12/29.
+//  Copyright © 2017年 Macmafia. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#endif /* PrefixHeader_pch */
