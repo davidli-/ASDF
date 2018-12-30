@@ -28,6 +28,8 @@
 		0A8108822134328A004A886C /* UIView+XIB.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A8108812134328A004A886C /* UIView+XIB.m */; };
 		0A81088821356D1D004A886C /* Student.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A81088721356D1D004A886C /* Student.m */; };
 		0A853469219491FF002AF0D3 /* CustomShapeLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A853468219491FF002AF0D3 /* CustomShapeLayer.m */; };
+		0A8889D621D7BE020058FDD4 /* ASDFCollectionViewHorizontalAnimateFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A8889D521D7BE020058FDD4 /* ASDFCollectionViewHorizontalAnimateFlowLayout.m */; };
+		0A8889D921D7BE530058FDD4 /* ASDFCollectionViewHorizontalBaseFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A8889D821D7BE530058FDD4 /* ASDFCollectionViewHorizontalBaseFlowLayout.m */; };
 		0A88907B21C2BCEB00297D87 /* RunloopHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A88907A21C2BCEB00297D87 /* RunloopHelper.m */; };
 		0A88907E21C2BE2F00297D87 /* RuntimeTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A88907D21C2BE2F00297D87 /* RuntimeTest.m */; };
 		0A9BF5A51F274683008C5F70 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A9BF5A41F274683008C5F70 /* main.m */; };
@@ -57,7 +59,7 @@
 		0AEDFEBC214623DD006B318F /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AEDFEBB214623DD006B318F /* HealthKit.framework */; };
 		0AF3283521A1847400E25755 /* SubInitializer2.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AF3283421A1847400E25755 /* SubInitializer2.m */; };
 		0AFB6D831F712096002B3544 /* MyWorkerClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AFB6D821F712096002B3544 /* MyWorkerClass.m */; };
-		FBF8651ACF5E27197882A072 /* libPods-ASDF.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 264134ED0C7291DB5A757C8B /* libPods-ASDF.a */; };
+		B843D418BD690479B1C28ECF /* Pods_ASDF.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 412E5B44540CD175780FF3E2 /* Pods_ASDF.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -121,6 +123,10 @@
 		0A81088721356D1D004A886C /* Student.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Student.m; sourceTree = "<group>"; };
 		0A853467219491FF002AF0D3 /* CustomShapeLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomShapeLayer.h; sourceTree = "<group>"; };
 		0A853468219491FF002AF0D3 /* CustomShapeLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomShapeLayer.m; sourceTree = "<group>"; };
+		0A8889D421D7BE020058FDD4 /* ASDFCollectionViewHorizontalAnimateFlowLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ASDFCollectionViewHorizontalAnimateFlowLayout.h; sourceTree = "<group>"; };
+		0A8889D521D7BE020058FDD4 /* ASDFCollectionViewHorizontalAnimateFlowLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ASDFCollectionViewHorizontalAnimateFlowLayout.m; sourceTree = "<group>"; };
+		0A8889D721D7BE530058FDD4 /* ASDFCollectionViewHorizontalBaseFlowLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ASDFCollectionViewHorizontalBaseFlowLayout.h; sourceTree = "<group>"; };
+		0A8889D821D7BE530058FDD4 /* ASDFCollectionViewHorizontalBaseFlowLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ASDFCollectionViewHorizontalBaseFlowLayout.m; sourceTree = "<group>"; };
 		0A88907921C2BCEB00297D87 /* RunloopHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RunloopHelper.h; sourceTree = "<group>"; };
 		0A88907A21C2BCEB00297D87 /* RunloopHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RunloopHelper.m; sourceTree = "<group>"; };
 		0A88907C21C2BE2F00297D87 /* RuntimeTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RuntimeTest.h; sourceTree = "<group>"; };
@@ -178,7 +184,7 @@
 		0AF3283421A1847400E25755 /* SubInitializer2.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SubInitializer2.m; sourceTree = "<group>"; };
 		0AFB6D811F712096002B3544 /* MyWorkerClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyWorkerClass.h; sourceTree = "<group>"; };
 		0AFB6D821F712096002B3544 /* MyWorkerClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyWorkerClass.m; sourceTree = "<group>"; };
-		264134ED0C7291DB5A757C8B /* libPods-ASDF.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ASDF.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		412E5B44540CD175780FF3E2 /* Pods_ASDF.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ASDF.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5BE5B0EC8A5F68DE920DF53 /* Pods-ASDF.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ASDF.release.xcconfig"; path = "Pods/Target Support Files/Pods-ASDF/Pods-ASDF.release.xcconfig"; sourceTree = "<group>"; };
 		C9599C48C1DF14F69F8264CB /* Pods-ASDF.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ASDF.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ASDF/Pods-ASDF.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -203,7 +209,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0AEDFEBC214623DD006B318F /* HealthKit.framework in Frameworks */,
-				FBF8651ACF5E27197882A072 /* libPods-ASDF.a in Frameworks */,
+				B843D418BD690479B1C28ECF /* Pods_ASDF.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -213,8 +219,12 @@
 		0A06EE6E21D52D970004187B /* FlowLayout */ = {
 			isa = PBXGroup;
 			children = (
+				0A8889D721D7BE530058FDD4 /* ASDFCollectionViewHorizontalBaseFlowLayout.h */,
+				0A8889D821D7BE530058FDD4 /* ASDFCollectionViewHorizontalBaseFlowLayout.m */,
 				0A06EE6B21D52CD70004187B /* ASDFCollectionViewHorizonalFlowLayout.h */,
 				0A06EE6C21D52CD70004187B /* ASDFCollectionViewHorizonalFlowLayout.m */,
+				0A8889D421D7BE020058FDD4 /* ASDFCollectionViewHorizontalAnimateFlowLayout.h */,
+				0A8889D521D7BE020058FDD4 /* ASDFCollectionViewHorizontalAnimateFlowLayout.m */,
 			);
 			name = FlowLayout;
 			sourceTree = "<group>";
@@ -446,6 +456,7 @@
 				0AC86E481FEC2E1A00098A24 /* TestViewController.m */,
 				0ADE405121D2645100D6B092 /* ASDFCollectionViewController.h */,
 				0ADE405221D2645100D6B092 /* ASDFCollectionViewController.m */,
+				0A06EE6E21D52D970004187B /* FlowLayout */,
 				0A3DE82721A078B30058F291 /* Hexo */,
 				0A803DBF2194A0E500AFE319 /* Layer */,
 				0A5BB075213430C800283890 /* Tool */,
@@ -454,7 +465,6 @@
 				0A5BB0732134303C00283890 /* multi-Thread */,
 				0A5BB0722134300900283890 /* Model */,
 				0A5BB07121342FD200283890 /* Category */,
-				0A06EE6E21D52D970004187B /* FlowLayout */,
 				0A5BB0762134310A00283890 /* Res */,
 			);
 			name = Files;
@@ -464,7 +474,7 @@
 			isa = PBXGroup;
 			children = (
 				0AEDFEBB214623DD006B318F /* HealthKit.framework */,
-				264134ED0C7291DB5A757C8B /* libPods-ASDF.a */,
+				412E5B44540CD175780FF3E2 /* Pods_ASDF.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -525,6 +535,7 @@
 				0A9BF59C1F274683008C5F70 /* Sources */,
 				0A9BF59D1F274683008C5F70 /* Frameworks */,
 				0A9BF59E1F274683008C5F70 /* Resources */,
+				7CA08C49A864E3CD8F8E3785 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -636,6 +647,24 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		7CA08C49A864E3CD8F8E3785 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-ASDF/Pods-ASDF-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ASDF/Pods-ASDF-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -664,6 +693,7 @@
 				0A9BF5AB1F274683008C5F70 /* ViewController.m in Sources */,
 				0A81088821356D1D004A886C /* Student.m in Sources */,
 				0AE158471F45E0E400740EDE /* NSMutableArray+Extension.m in Sources */,
+				0A8889D621D7BE020058FDD4 /* ASDFCollectionViewHorizontalAnimateFlowLayout.m in Sources */,
 				0ADE405321D2645100D6B092 /* ASDFCollectionViewController.m in Sources */,
 				0AC3E82E21C3FAC90034CB2E /* AnimateClickedView.m in Sources */,
 				0AF3283521A1847400E25755 /* SubInitializer2.m in Sources */,
@@ -701,6 +731,7 @@
 				0A9BF5A51F274683008C5F70 /* main.m in Sources */,
 				0A3DE82621A0783F0058F291 /* Initializer+Category.m in Sources */,
 				0A5A58AA213ABF0F001FBBE5 /* SwiftFile.swift in Sources */,
+				0A8889D921D7BE530058FDD4 /* ASDFCollectionViewHorizontalBaseFlowLayout.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

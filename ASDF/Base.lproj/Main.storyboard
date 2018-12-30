@@ -322,9 +322,12 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="X7W-nz-doF">
-                                <rect key="frame" x="0.0" y="28" width="375" height="639"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="a5W-gn-3bl" customClass="ASDFCollectionViewHorizonalFlowLayout">
+                                <rect key="frame" x="0.0" y="28" width="375" height="100"/>
+                                <color key="backgroundColor" red="0.874259410372483" green="1" blue="0.25453867572102162" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="HTU-6m-2J1"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="a5W-gn-3bl" customClass="ASDFCollectionViewHorizontalAnimateFlowLayout">
                                     <size key="itemSize" width="50" height="50"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -332,7 +335,7 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="tie-ln-xsQ">
-                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <rect key="frame" x="0.0" y="25" width="50" height="50"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                                             <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
@@ -364,11 +367,11 @@
                             <constraint firstItem="X7W-nz-doF" firstAttribute="top" secondItem="jg3-4O-ZJN" secondAttribute="bottom" constant="8" id="IQg-5M-pSf"/>
                             <constraint firstItem="X7W-nz-doF" firstAttribute="leading" secondItem="3M2-Ko-K0o" secondAttribute="leading" id="oL1-Iq-xHl"/>
                             <constraint firstAttribute="trailing" secondItem="X7W-nz-doF" secondAttribute="trailing" id="qDz-b2-cE7"/>
-                            <constraint firstItem="u6k-Hk-b8Z" firstAttribute="top" secondItem="X7W-nz-doF" secondAttribute="bottom" id="vxs-hX-EXf"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="mCollectionview" destination="X7W-nz-doF" id="RNv-xp-Vmt"/>
+                        <outlet property="mHorizontalFlowLayout" destination="a5W-gn-3bl" id="9ym-Ig-Caf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GfL-uc-Wvo" userLabel="First Responder" sceneMemberID="firstResponder"/>
