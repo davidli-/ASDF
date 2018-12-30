@@ -9,8 +9,8 @@
 #import "ASDFCollectionViewController.h"
 #import "ASDFCollectionViewHorizontalAnimateFlowLayout.h"
 
-static const CGFloat ITEM_WIDTH  = 200.0f;
-static const CGFloat ITEM_HEIGHT = 100.0f;
+static const CGFloat ITEM_WIDTH  = 50.0f;
+static const CGFloat ITEM_HEIGHT = 50.0f;
 
 @interface ASDFCollectionViewController ()
 <
@@ -21,26 +21,18 @@ UICollectionViewDelegateFlowLayout
 @property (weak, nonatomic) IBOutlet UICollectionView *mCollectionview;
 @property (weak, nonatomic) IBOutlet ASDFCollectionViewHorizontalAnimateFlowLayout *mHorizontalFlowLayout;
 @property (nonatomic, strong) NSMutableArray *mAnimatedIndexPathArr;
+@property (nonatomic, strong) UILongPressGestureRecognizer *mGesture;
+@property (nonatomic, strong) NSIndexPath *mStartIndexPath;
+@property (nonatomic, strong) NSIndexPath *mTargetIndexPath;
+@property (nonatomic, strong) NSMutableArray *mDatasourceArr;
 @end
 
 @implementation ASDFCollectionViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self initUI];
     [self initData];
-}
-
-- (void)initData
-{
-    _mAnimatedIndexPathArr = [NSMutableArray array];
-    
-    _mHorizontalFlowLayout.itemSize = CGSizeMake(ITEM_WIDTH, ITEM_HEIGHT);
-    _mHorizontalFlowLayout.sectionInset = UIEdgeInsetsMake(0, 10, 0, 10);
-    _mHorizontalFlowLayout.minimumLineSpacing = 10;
-    _mHorizontalFlowLayout.minimumInteritemSpacing = 10;
-    _mHorizontalFlowLayout.mCellWidth = ITEM_WIDTH;
-    _mHorizontalFlowLayout.mCellHeight = ITEM_HEIGHT;
-//    _mHorizontalFlowLayout.mColumn = (CGRectGetWidth(self.mCollectionview.frame) - _mHorizontalFlowLayout.sectionInset.left - _mHorizontalFlowLayout.sectionInset.right + _mHorizontalFlowLayout.minimumInteritemSpacing) / (_mHorizontalFlowLayout.mCellWidth + _mHorizontalFlowLayout.minimumInteritemSpacing);
 }
 
 #pragma mark -Datasource
@@ -52,7 +44,7 @@ UICollectionViewDelegateFlowLayout
 - (NSInteger)collectionView:(UICollectionView *)collectionView
      numberOfItemsInSection:(NSInteger)section
 {
-    return 120;
+    return _mDatasourceArr.count;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView
@@ -60,7 +52,8 @@ UICollectionViewDelegateFlowLayout
 {
     UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"cell" forIndexPath:indexPath];
     UILabel *label = [cell.contentView viewWithTag:1];
-    label.text = [NSString stringWithFormat:@"%ld",(long)indexPath.item];
+    int num = [_mDatasourceArr[indexPath.item] intValue];
+    label.text = [NSString stringWithFormat:@"%d",num];
     return cell;
 }
 
@@ -153,4 +146,89 @@ shouldShowMenuForItemAtIndexPath:(NSIndexPath *)indexPath
 //{
 //    return 10;
 //}
+
+#pragma mark -Business
+
+- (void)initData
+{
+    _mAnimatedIndexPathArr = [NSMutableArray array];
+    _mDatasourceArr = [NSMutableArray arrayWithCapacity:120];
+    for (int i = 0; i < 120; i++) {
+        [_mDatasourceArr addObject:@(i)];
+    }
+    _mHorizontalFlowLayout.itemSize = CGSizeMake(ITEM_WIDTH, ITEM_HEIGHT);
+    _mHorizontalFlowLayout.sectionInset = UIEdgeInsetsMake(0, 10, 0, 10);
+    _mHorizontalFlowLayout.minimumLineSpacing = 10;
+    _mHorizontalFlowLayout.minimumInteritemSpacing = 10;
+    _mHorizontalFlowLayout.mCellWidth = ITEM_WIDTH;
+    _mHorizontalFlowLayout.mCellHeight = ITEM_HEIGHT;
+    //    _mHorizontalFlowLayout.mColumn = (CGRectGetWidth(self.mCollectionview.frame) - _mHorizontalFlowLayout.sectionInset.left - _mHorizontalFlowLayout.sectionInset.right + _mHorizontalFlowLayout.minimumInteritemSpacing) / (_mHorizontalFlowLayout.mCellWidth + _mHorizontalFlowLayout.minimumInteritemSpacing);
+}
+
+- (void)initUI{
+    UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
+    [btn setTitle:@"操作" forState:UIControlStateNormal];
+    [btn setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
+    [btn sizeToFit];
+    [btn addTarget:self action:@selector(onHandleBtn:) forControlEvents:UIControlEventTouchUpInside];
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:btn];
+    
+    _mGesture = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(onHangleGesture:)];
+    [self.mCollectionview addGestureRecognizer:_mGesture];
+}
+
+#pragma mark -Cell Move Actions
+- (void)onHandleBtn:(id)sender{
+    [self.mCollectionview moveItemAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0]
+                                  toIndexPath:[NSIndexPath indexPathForRow:2 inSection:0]];
+    [_mDatasourceArr exchangeObjectAtIndex:0 withObjectAtIndex:2];
+}
+
+- (void)onHangleGesture:(UIGestureRecognizer*)gesture
+{
+    switch (gesture.state) {
+        case UIGestureRecognizerStateBegan:
+            [self onDragBegin:gesture];
+            break;
+        case UIGestureRecognizerStateChanged:
+            [self onDragChanged:gesture];
+            break;
+        case UIGestureRecognizerStateEnded:
+            [self onDragEnd:gesture];
+            break;
+        case UIGestureRecognizerStateCancelled:
+            //[_mCollectionview cancelInteractiveMovement];
+            break;
+        default:
+            break;
+    }
+}
+
+- (void)onDragBegin:(UIGestureRecognizer*)gesture
+{
+    CGPoint point = [gesture locationInView:_mCollectionview];
+    NSIndexPath *indexPath = [_mCollectionview indexPathForItemAtPoint:point];
+    if (indexPath) {//开始移动
+        _mStartIndexPath = indexPath;
+        UICollectionViewCell *cell = [_mCollectionview cellForItemAtIndexPath:indexPath];
+        cell.transform = CGAffineTransformMakeScale(1.2, 1.2);
+        //[_mCollectionview beginInteractiveMovementForItemAtIndexPath:indexPath];
+    }
+}
+
+- (void)onDragChanged:(UIGestureRecognizer*)gesture
+{
+    CGPoint point = [gesture locationInView:_mCollectionview];
+    NSIndexPath *indexPath = [_mCollectionview indexPathForItemAtPoint:point];
+    if (indexPath) {
+        _mTargetIndexPath = indexPath;
+        [_mCollectionview moveItemAtIndexPath:_mStartIndexPath toIndexPath:_mTargetIndexPath];
+        [_mDatasourceArr exchangeObjectAtIndex:_mStartIndexPath.item withObjectAtIndex:_mTargetIndexPath.item];
+        _mStartIndexPath = _mTargetIndexPath;
+    }
+}
+
+- (void)onDragEnd:(UIGestureRecognizer*)gesture{
+    //[_mCollectionview endInteractiveMovement];
+}
 @end

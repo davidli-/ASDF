@@ -89,17 +89,17 @@
     // 中心轴x
     CGFloat centerX = proposedContentOffset.x + self.collectionView.frame.size.width / 2.0f;
     NSArray *attrArr = [super layoutAttributesForElementsInRect:visableRect];
-    CGFloat offsetDiff = MAXFLOAT; //item中心与collectionview中心点的间距
+    CGFloat minDelta = MAXFLOAT; //距collectionview中心点最近的item与中心的的i间距
     
-    for (UICollectionViewLayoutAttributes *attr in attrArr) {
+    for (UICollectionViewLayoutAttributes *attr in attrArr) {//找到最小间距
         
         CGFloat deltX = fabs(attr.center.x - centerX);
         
-        if (deltX < fabs(offsetDiff)) {
-            offsetDiff = attr.center.x - centerX;
+        if (deltX < fabs(minDelta)) {
+            minDelta = attr.center.x - centerX;
         }
     }
-    proposedContentOffset.x += offsetDiff;//补足间距 以便item中心点与collectionview中心重合
+    proposedContentOffset.x += minDelta;//补足间距 以便item中心点与collectionview中心重合
     
     if (proposedContentOffset.x <= 0) {
         proposedContentOffset.x = 0;
