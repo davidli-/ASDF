@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import <UserNotifications/UserNotifications.h>
+#import "ASDFSingleton.h"
 
 @interface AppDelegate()<UNUserNotificationCenterDelegate>
 @end
@@ -29,6 +30,11 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
     //    NSCache;
     //    NSURLCache;
     //    CAShapeLayer;
+    
+    ASDFSingleton *s1 = [ASDFSingleton shareInstance];
+    ASDFSingleton *s2 = [[ASDFSingleton alloc] init];
+    ASDFSingleton *s3 = [ASDFSingleton new];
+    NSLog(@"++s1:%@\n++s2:%@\n++s3:%@",s1,s2,s3);
     
     return YES;
 }

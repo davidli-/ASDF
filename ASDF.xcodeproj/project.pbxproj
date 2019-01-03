@@ -40,6 +40,7 @@
 		0A9BF5B31F274683008C5F70 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A9BF5B11F274683008C5F70 /* LaunchScreen.storyboard */; };
 		0A9EFA1821DE4158003287FB /* ASDFBlueView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A9EFA1721DE4158003287FB /* ASDFBlueView.m */; };
 		0A9EFA1B21DE418B003287FB /* ASDFResponsibleLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A9EFA1A21DE418B003287FB /* ASDFResponsibleLabel.m */; };
+		0A9EFA1E21DE6C24003287FB /* ASDFSingleton.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A9EFA1D21DE6C24003287FB /* ASDFSingleton.m */; };
 		0ABD9EAD1F274C1C00DF4D4C /* ViewControllerII.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ABD9EAC1F274C1C00DF4D4C /* ViewControllerII.m */; };
 		0AC3E82E21C3FAC90034CB2E /* AnimateClickedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AC3E82D21C3FAC90034CB2E /* AnimateClickedView.m */; };
 		0AC51A632199F38F005B3CBE /* Model.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AC51A622199F38F005B3CBE /* Model.m */; };
@@ -147,6 +148,8 @@
 		0A9EFA1721DE4158003287FB /* ASDFBlueView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ASDFBlueView.m; sourceTree = "<group>"; };
 		0A9EFA1921DE418B003287FB /* ASDFResponsibleLabel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ASDFResponsibleLabel.h; sourceTree = "<group>"; };
 		0A9EFA1A21DE418B003287FB /* ASDFResponsibleLabel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ASDFResponsibleLabel.m; sourceTree = "<group>"; };
+		0A9EFA1C21DE6C24003287FB /* ASDFSingleton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ASDFSingleton.h; sourceTree = "<group>"; };
+		0A9EFA1D21DE6C24003287FB /* ASDFSingleton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ASDFSingleton.m; sourceTree = "<group>"; };
 		0ABD9EAB1F274C1C00DF4D4C /* ViewControllerII.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewControllerII.h; sourceTree = "<group>"; };
 		0ABD9EAC1F274C1C00DF4D4C /* ViewControllerII.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewControllerII.m; sourceTree = "<group>"; };
 		0AC3E82C21C3FAC90034CB2E /* AnimateClickedView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AnimateClickedView.h; sourceTree = "<group>"; };
@@ -354,6 +357,8 @@
 				0A6D450C21CCE4EE00257A42 /* ASDFThreadHelper.m */,
 				0ADA67681FCD9AD300F72090 /* ExceptionHandler.h */,
 				0ADA67691FCD9AD300F72090 /* ExceptionHandler.m */,
+				0A9EFA1C21DE6C24003287FB /* ASDFSingleton.h */,
+				0A9EFA1D21DE6C24003287FB /* ASDFSingleton.m */,
 			);
 			name = Tool;
 			sourceTree = "<group>";
@@ -734,6 +739,7 @@
 				0A853469219491FF002AF0D3 /* CustomShapeLayer.m in Sources */,
 				0AC86E491FEC2E1A00098A24 /* TestViewController.m in Sources */,
 				0A8108822134328A004A886C /* UIView+XIB.m in Sources */,
+				0A9EFA1E21DE6C24003287FB /* ASDFSingleton.m in Sources */,
 				0A88907E21C2BE2F00297D87 /* RuntimeTest.m in Sources */,
 				0ADA67661FC9823200F72090 /* Person.m in Sources */,
 				0A5BB07021342E7600283890 /* UIViewInspectable.m in Sources */,
@@ -1018,6 +1024,7 @@
 			baseConfigurationReference = C9599C48C1DF14F69F8264CB /* Pods-ASDF.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				AppName = Hallo1;
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_ENTITLEMENTS = ASDF/ASDF.entitlements;
@@ -1040,6 +1047,7 @@
 			baseConfigurationReference = B5BE5B0EC8A5F68DE920DF53 /* Pods-ASDF.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				AppName = Hallo3;
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_ENTITLEMENTS = ASDF/ASDF.entitlements;
@@ -1056,6 +1064,132 @@
 			};
 			name = Release;
 		};
+		0A9EFA1F21DE74AC003287FB /* InHouse */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = "InHouse=1";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = InHouse;
+		};
+		0A9EFA2021DE74AC003287FB /* InHouse */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B5BE5B0EC8A5F68DE920DF53 /* Pods-ASDF.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				AppName = Hallo2;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_ENTITLEMENTS = ASDF/ASDF.entitlements;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = D7FS892R5K;
+				ENABLE_STRICT_OBJC_MSGSEND = NO;
+				GCC_PREFIX_HEADER = $PROJECT_DIR/ASDF/PrefixHeader.pch;
+				INFOPLIST_FILE = ASDF/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = David.ASDF;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ASDF/ASDF-Bridging-Header.h";
+				SWIFT_VERSION = 4.0;
+			};
+			name = InHouse;
+		};
+		0A9EFA2121DE74AC003287FB /* InHouse */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = ASDFTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = David.ASDFTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ASDF.app/ASDF";
+			};
+			name = InHouse;
+		};
+		0A9EFA2221DE74AC003287FB /* InHouse */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = ASDFUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = David.ASDFUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ASDF;
+			};
+			name = InHouse;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1064,6 +1198,7 @@
 			buildConfigurations = (
 				0A3B47BC21A83F5800EED7A7 /* Debug */,
 				0A3B47BD21A83F5800EED7A7 /* Release */,
+				0A9EFA2121DE74AC003287FB /* InHouse */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1073,6 +1208,7 @@
 			buildConfigurations = (
 				0A3B47CB21A8542400EED7A7 /* Debug */,
 				0A3B47CC21A8542400EED7A7 /* Release */,
+				0A9EFA2221DE74AC003287FB /* InHouse */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1082,6 +1218,7 @@
 			buildConfigurations = (
 				0A9BF5B51F274683008C5F70 /* Debug */,
 				0A9BF5B61F274683008C5F70 /* Release */,
+				0A9EFA1F21DE74AC003287FB /* InHouse */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1091,6 +1228,7 @@
 			buildConfigurations = (
 				0A9BF5B81F274683008C5F70 /* Debug */,
 				0A9BF5B91F274683008C5F70 /* Release */,
+				0A9EFA2021DE74AC003287FB /* InHouse */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

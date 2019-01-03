@@ -74,6 +74,14 @@ void signalExceptionHandler(int signo)
     return mExceptionHandler;
 }
 
++ (instancetype)allocWithZone:(struct _NSZone *)zone{
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        mExceptionHandler = [super allocWithZone:zone];
+    });
+    return mExceptionHandler;
+}
+
 #pragma mark -开始监听异常
 + (void)setDefaultHandler{
     NSSetUncaughtExceptionHandler (&UncaughtExceptionHandler);
