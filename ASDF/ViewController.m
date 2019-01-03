@@ -74,6 +74,7 @@ static void *mAssociateObjKey = &mAssociateObjKey;
 
 #pragma mark -Touch Delegate
 -(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+    NSLog(@"++Touch began in ViewController~");
 //    if (aInt != 0) {
 //        NSLog(@"++++MMMM:%@",NSStringFromCGPoint(_animateView.layer.modelLayer.frame.origin));
 //        NSLog(@"++++PPPP:%@",NSStringFromCGPoint(_animateView.layer.presentationLayer.frame.origin));

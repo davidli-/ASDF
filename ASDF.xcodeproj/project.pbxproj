@@ -38,6 +38,8 @@
 		0A9BF5AE1F274683008C5F70 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A9BF5AC1F274683008C5F70 /* Main.storyboard */; };
 		0A9BF5B01F274683008C5F70 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A9BF5AF1F274683008C5F70 /* Assets.xcassets */; };
 		0A9BF5B31F274683008C5F70 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A9BF5B11F274683008C5F70 /* LaunchScreen.storyboard */; };
+		0A9EFA1821DE4158003287FB /* ASDFBlueView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A9EFA1721DE4158003287FB /* ASDFBlueView.m */; };
+		0A9EFA1B21DE418B003287FB /* ASDFResponsibleLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A9EFA1A21DE418B003287FB /* ASDFResponsibleLabel.m */; };
 		0ABD9EAD1F274C1C00DF4D4C /* ViewControllerII.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ABD9EAC1F274C1C00DF4D4C /* ViewControllerII.m */; };
 		0AC3E82E21C3FAC90034CB2E /* AnimateClickedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AC3E82D21C3FAC90034CB2E /* AnimateClickedView.m */; };
 		0AC51A632199F38F005B3CBE /* Model.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AC51A622199F38F005B3CBE /* Model.m */; };
@@ -141,6 +143,10 @@
 		0A9BF5AF1F274683008C5F70 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0A9BF5B21F274683008C5F70 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0A9BF5B41F274683008C5F70 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0A9EFA1621DE4158003287FB /* ASDFBlueView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ASDFBlueView.h; sourceTree = "<group>"; };
+		0A9EFA1721DE4158003287FB /* ASDFBlueView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ASDFBlueView.m; sourceTree = "<group>"; };
+		0A9EFA1921DE418B003287FB /* ASDFResponsibleLabel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ASDFResponsibleLabel.h; sourceTree = "<group>"; };
+		0A9EFA1A21DE418B003287FB /* ASDFResponsibleLabel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ASDFResponsibleLabel.m; sourceTree = "<group>"; };
 		0ABD9EAB1F274C1C00DF4D4C /* ViewControllerII.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewControllerII.h; sourceTree = "<group>"; };
 		0ABD9EAC1F274C1C00DF4D4C /* ViewControllerII.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewControllerII.m; sourceTree = "<group>"; };
 		0AC3E82C21C3FAC90034CB2E /* AnimateClickedView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AnimateClickedView.h; sourceTree = "<group>"; };
@@ -445,6 +451,17 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		0A9EFA1521DE4108003287FB /* UIResponderChain */ = {
+			isa = PBXGroup;
+			children = (
+				0A9EFA1621DE4158003287FB /* ASDFBlueView.h */,
+				0A9EFA1721DE4158003287FB /* ASDFBlueView.m */,
+				0A9EFA1921DE418B003287FB /* ASDFResponsibleLabel.h */,
+				0A9EFA1A21DE418B003287FB /* ASDFResponsibleLabel.m */,
+			);
+			name = UIResponderChain;
+			sourceTree = "<group>";
+		};
 		0ADA67671FCD9A0100F72090 /* Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -456,6 +473,7 @@
 				0AC86E481FEC2E1A00098A24 /* TestViewController.m */,
 				0ADE405121D2645100D6B092 /* ASDFCollectionViewController.h */,
 				0ADE405221D2645100D6B092 /* ASDFCollectionViewController.m */,
+				0A9EFA1521DE4108003287FB /* UIResponderChain */,
 				0A06EE6E21D52D970004187B /* FlowLayout */,
 				0A3DE82721A078B30058F291 /* Hexo */,
 				0A803DBF2194A0E500AFE319 /* Layer */,
@@ -701,11 +719,13 @@
 				0AE158501F5089A900740EDE /* IvarTool.m in Sources */,
 				0A40BD7721946F8800BD03A1 /* CustomLayer.m in Sources */,
 				0A01B90A1FBF0DAD00250B19 /* NetOperation.m in Sources */,
+				0A9EFA1821DE4158003287FB /* ASDFBlueView.m in Sources */,
 				0A88907B21C2BCEB00297D87 /* RunloopHelper.m in Sources */,
 				0A9BF5A81F274683008C5F70 /* AppDelegate.m in Sources */,
 				0A1EB87F218DFE89005B6B54 /* ASDFThread.m in Sources */,
 				0A6D450D21CCE4EE00257A42 /* ASDFThreadHelper.m in Sources */,
 				0AC86E4F1FED265800098A24 /* SessionTaskViewController.m in Sources */,
+				0A9EFA1B21DE418B003287FB /* ASDFResponsibleLabel.m in Sources */,
 				0AC51A632199F38F005B3CBE /* Model.m in Sources */,
 				0AE1584D1F4DF04C00740EDE /* ForwardTool.m in Sources */,
 				0AE1585C1F56FAD400740EDE /* NSObject+Associate.m in Sources */,

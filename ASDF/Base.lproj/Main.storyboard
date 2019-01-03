@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="VGU-HB-HIq">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -33,19 +33,31 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xqy-kd-bhg" customClass="UIViewInspectable">
                                 <rect key="frame" x="87.5" y="70" width="200" height="200"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="所见即所得" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="11U-QU-kqg">
-                                        <rect key="frame" x="56.5" y="89.5" width="87" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" red="0.91372549020000005" green="0.36862745099999999" blue="0.3921568627" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VjB-eS-0lR" customClass="ASDFBlueView">
+                                        <rect key="frame" x="20" y="30" width="160" height="140"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="所见即所得" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="11U-QU-kqg" customClass="ASDFResponsibleLabel">
+                                                <rect key="frame" x="36.5" y="59" width="87" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="11U-QU-kqg" firstAttribute="centerX" secondItem="VjB-eS-0lR" secondAttribute="centerX" id="L4m-Nj-D50"/>
+                                            <constraint firstItem="11U-QU-kqg" firstAttribute="centerY" secondItem="VjB-eS-0lR" secondAttribute="centerY" id="WTy-6n-B6f"/>
+                                        </constraints>
+                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstItem="11U-QU-kqg" firstAttribute="centerX" secondItem="Xqy-kd-bhg" secondAttribute="centerX" id="3dK-z2-dqd"/>
+                                    <constraint firstAttribute="trailing" secondItem="VjB-eS-0lR" secondAttribute="trailing" constant="20" id="5DV-EX-SpW"/>
+                                    <constraint firstItem="VjB-eS-0lR" firstAttribute="top" secondItem="Xqy-kd-bhg" secondAttribute="top" constant="30" id="6Gy-As-hnq"/>
+                                    <constraint firstAttribute="bottom" secondItem="VjB-eS-0lR" secondAttribute="bottom" constant="30" id="IND-P8-lzq"/>
                                     <constraint firstAttribute="width" constant="200" id="QCz-MD-8Hw"/>
-                                    <constraint firstItem="11U-QU-kqg" firstAttribute="centerY" secondItem="Xqy-kd-bhg" secondAttribute="centerY" id="pcd-0c-eo9"/>
                                     <constraint firstAttribute="width" secondItem="Xqy-kd-bhg" secondAttribute="height" multiplier="1:1" id="sEm-k7-WEd"/>
+                                    <constraint firstItem="VjB-eS-0lR" firstAttribute="leading" secondItem="Xqy-kd-bhg" secondAttribute="leading" constant="20" id="wHw-58-ZHj"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -79,7 +91,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.0" green="1" blue="0.2470588386" alpha="1" colorSpace="deviceRGB"/>
+                        <color key="backgroundColor" red="1" green="0.37521800249280457" blue="0.13518444235657212" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="BM5-qq-axg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1P0-Vi-vLM"/>
                             <constraint firstItem="BM5-qq-axg" firstAttribute="centerY" secondItem="bzM-OX-mct" secondAttribute="centerY" id="Cwx-GK-QbG"/>
