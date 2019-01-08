@@ -7,6 +7,7 @@
 //
 
 #import "ViewControllerII.h"
+#import "ASDNotificationCenter.h"
 
 @interface ViewControllerII ()
 
@@ -20,8 +21,14 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [[ASDNotificationCenter defaultCenter] addObserver:self selector:@selector(onNotification:) name:@"ANotification" object:@"Hello"];
+    [[ASDNotificationCenter defaultCenter] addObserver:self selector:@selector(onNotification:) name:@"ANotification" object:@"Hello"];
 }
-
+- (void)onNotification:(id)notification
+{
+//    id obj = notification.object;
+    NSLog(@"");
+}
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
 }

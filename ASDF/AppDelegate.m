@@ -8,9 +8,10 @@
 
 #import "AppDelegate.h"
 #import <UserNotifications/UserNotifications.h>
-#import "ASDFSingleton.h"
+#import "ASDNotificationCenter.h"
 
 @interface AppDelegate()<UNUserNotificationCenterDelegate>
+
 @end
 
 @implementation AppDelegate
@@ -18,33 +19,29 @@
 - (BOOL)application:(UIApplication *)application
 didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    //    UIView *view;
-    //    CALayer;
-    //    CAAnimation;
-    //    CAPropertyAnimation;
-    //        CABasicAnimation;
-    //            CASpringAnimation;
-    //        CAKeyframeAnimation;
-    //    CATransition;
-    //    CAAnimationGroup;
-    //    NSCache;
-    //    NSURLCache;
-    //    CAShapeLayer;
-    
-    ASDFSingleton *s1 = [ASDFSingleton shareInstance];
-    ASDFSingleton *s2 = [[ASDFSingleton alloc] init];
-    ASDFSingleton *s3 = [ASDFSingleton new];
-    NSLog(@"++s1:%@\n++s2:%@\n++s3:%@",s1,s2,s3);
-    
+//        UIView *view;
+//        CALayer;
+//        CAAnimation;
+//        CAPropertyAnimation;
+//            CABasicAnimation;
+//                CASpringAnimation;
+//            CAKeyframeAnimation;
+//        CATransition;
+//        CAAnimationGroup;
+//        NSCache;
+//        NSURLCache;
+//        CAShapeLayer;
+
     return YES;
 }
 
 - (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken
 {
-    NSString *deviceString = [[deviceToken description] stringByTrimmingCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@"<>"]];
+    NSString *deviceString = [[deviceToken description] stringByTrimmingCharactersInSet:
+                              [NSCharacterSet characterSetWithCharactersInString:@"<>"]];
     deviceString = [deviceString stringByReplacingOccurrencesOfString:@" " withString:@""];
     
-    NSLog(@"deviceToken===========%@",deviceString);
+    NSLog(@"+++deviceToken:%@",deviceString);
 }
 
 - (void)application:(UIApplication *)application didFailToRegisterForRemoteNotificationsWithError:(NSError *)error
@@ -68,7 +65,7 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
                           }];
     //查询当前通知授权状况
     [center getNotificationSettingsWithCompletionHandler:^(UNNotificationSettings * _Nonnull settings) {
-        NSLog(@"========%@",settings);
+        NSLog(@"+++%@",settings);
     }];
     [[UIApplication sharedApplication] registerForRemoteNotifications];
     

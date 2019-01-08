@@ -9,12 +9,8 @@
 #import "ViewController.h"
 #import "ViewControllerII.h"
 #import <objc/runtime.h>
-#import <HealthKit/HealthKit.h>
-#import "CustomLayer.h"
-#import "CustomView.h"
 #import "AnimateClickedView.h"
-#import "MainThreadStuckedObserverTool.h"
-#import "TestViewController.h"
+#import "ASDFDownloadController.h"
 
 static void *mAssociateObjKey = &mAssociateObjKey;
 
@@ -23,10 +19,7 @@ static void *mAssociateObjKey = &mAssociateObjKey;
     int aInt;
     int count;
 }
-@property (nonatomic, strong) HKHealthStore *healthStore;
-@property(nonatomic, copy) NSString *HAHAH;
 @property (nonatomic, strong) AnimateClickedView *animateView;
-@property (nonatomic, strong) CustomLayer *mSublayer;
 @end
 
 @implementation ViewController
@@ -42,13 +35,6 @@ static void *mAssociateObjKey = &mAssociateObjKey;
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
-
-//    _mSublayer = [[CustomLayer alloc] init];
-//    _mSublayer.delegate = self;
-//    _mSublayer.backgroundColor = [UIColor whiteColor].CGColor;
-//    _mSublayer.frame = CGRectMake(100, 300, 100, 100);
-//    [self.view.layer addSublayer:_mSublayer];
-//    [_mSublayer setNeedsDisplay];//调用此方法触发重绘
     
 //    _animateView = [[AnimateClickedView alloc] init];
 //    _animateView.backgroundColor = [UIColor redColor];
@@ -74,7 +60,6 @@ static void *mAssociateObjKey = &mAssociateObjKey;
 
 #pragma mark -Touch Delegate
 -(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
-    NSLog(@"++Touch began in ViewController~");
 //    if (aInt != 0) {
 //        NSLog(@"++++MMMM:%@",NSStringFromCGPoint(_animateView.layer.modelLayer.frame.origin));
 //        NSLog(@"++++PPPP:%@",NSStringFromCGPoint(_animateView.layer.presentationLayer.frame.origin));
@@ -125,8 +110,14 @@ static void *mAssociateObjKey = &mAssociateObjKey;
 #pragma mark -Actions
 
 - (IBAction)onHandleModel:(id)sender {
-//    [MainThreadStuckedObserverTool monitorBussy];
+    ASDFDownloadController *viewControler2 = [[UIStoryboard storyboardWithName:@"Main"
+                                                                        bundle:[NSBundle mainBundle]]
+                                              instantiateViewControllerWithIdentifier:@"ASDFDownloadController"];
+    [self presentViewController:viewControler2 animated:YES completion:^{
+    }];
+}
 
+- (IBAction)onHandle1:(id)sender {
     ViewControllerII *viewControler = [[UIStoryboard storyboardWithName:@"Main"
                                                                  bundle:[NSBundle mainBundle]]
                                        instantiateViewControllerWithIdentifier:@"ViewControllerII"];
@@ -140,21 +131,13 @@ static void *mAssociateObjKey = &mAssociateObjKey;
     //[viewControler removeFromParentViewController];
 }
 
-- (IBAction)onHandle1:(id)sender {
-    TestViewController *viewControler2 = [[UIStoryboard storyboardWithName:@"Main"
-                                                                  bundle:[NSBundle mainBundle]]
-                                        instantiateViewControllerWithIdentifier:@"TestViewController"];
-    [self presentViewController:viewControler2 animated:YES completion:^{
-    }];
-}
-
 - (IBAction)onHandle2:(id)sender {
     NSArray *childs = [self childViewControllers];
     UIViewController *viewControler = childs[0];
     
-     TestViewController*viewControler2 = [[UIStoryboard storyboardWithName:@"Main"
+     ASDFDownloadController*viewControler2 = [[UIStoryboard storyboardWithName:@"Main"
                                                                   bundle:[NSBundle mainBundle]]
-                                        instantiateViewControllerWithIdentifier:@"TestViewController"];
+                                        instantiateViewControllerWithIdentifier:@"ASDFDownloadController"];
     [self addChildViewController:viewControler2];
     [viewControler2.view setFrame:CGRectMake(0, self.view.frame.size.height, 375, 300)];
     
@@ -170,65 +153,4 @@ static void *mAssociateObjKey = &mAssociateObjKey;
 }
 
 #pragma mark -Business
-
-- (void)showAlert
-{
-    UIAlertController *alertControler = [UIAlertController alertControllerWithTitle:@"Title"
-                                                                            message:@"This is Mess"
-                                                                     preferredStyle:UIAlertControllerStyleAlert];
-    UIAlertAction *action = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
-        NSString *associateObj = objc_getAssociatedObject(alertControler, mAssociateObjKey);
-        NSLog(@"++++关联对象：%@",associateObj);
-        objc_setAssociatedObject(alertControler, mAssociateObjKey, nil, OBJC_ASSOCIATION_COPY_NONATOMIC);
-        
-        NSString *associateObj2 = objc_getAssociatedObject(alertControler, mAssociateObjKey);
-        NSLog(@"++++移除关联对象后：%@",associateObj2);
-    }];
-    [alertControler addAction:action];
-    
-    objc_setAssociatedObject(alertControler, mAssociateObjKey, @"This is a string obj", OBJC_ASSOCIATION_COPY_NONATOMIC);
-    
-    [self presentViewController:alertControler animated:YES completion:^{
-    }];
-}
-
-- (void)testLayer{
-    //ShapeLayer
-    //    CAShapeLayer *layer = [CAShapeLayer layer];
-    //    layer.frame = CGRectMake(0, 300, 200, 200);
-    //    layer.backgroundColor = [UIColor whiteColor].CGColor;
-    //    layer.lineWidth = 2;
-    //    layer.fillColor = [UIColor blueColor].CGColor;
-    //    layer.strokeColor = [UIColor blackColor].CGColor;
-    //
-    //    UIBezierPath *path = [UIBezierPath bezierPathWithOvalInRect:layer.bounds];
-    //    layer.path = path.CGPath;
-    //
-    //    [self.view.layer addSublayer:layer];
-    
-    //通过mask添加圆角
-    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(100, 300, 200, 200)];
-    view.backgroundColor = [UIColor whiteColor];
-    
-    CAShapeLayer *layer = [CAShapeLayer layer];
-    layer.backgroundColor = [UIColor clearColor].CGColor;
-    layer.frame = view.bounds;
-    UIBezierPath *path = [UIBezierPath bezierPathWithRoundedRect:view.bounds
-                                               byRoundingCorners:(UIRectCornerTopLeft | UIRectCornerTopRight |UIRectCornerBottomLeft)
-                                                     cornerRadii:CGSizeMake(20, 20)];
-    layer.path = path.CGPath;
-    view.layer.mask = layer;
-    [self.view addSubview:view];
-    
-    //    CustomLayer *layer = [[CustomLayer alloc] init];
-    //    layer.backgroundColor = [UIColor clearColor].CGColor;
-    //    layer.frame = CGRectMake(0, 300, self.view.frame.size.width, self.view.frame.size.height);
-    //    [self.view.layer addSublayer:layer];
-    //    [layer setNeedsDisplay];//调用此方法触发重绘
-    
-    //    CustomView *view = [[CustomView alloc] init];
-    //    view.backgroundColor = [UIColor whiteColor];
-    //    view.frame = CGRectMake(0, 300, 300, 300);
-    //    [self.view addSubview:view];
-}
 @end

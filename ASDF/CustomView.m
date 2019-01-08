@@ -11,10 +11,7 @@
 @implementation CustomView
 
 - (void)drawRect:(CGRect)rect {
-    UIGraphicsBeginImageContext(rect.size);
     CGContextRef ref = UIGraphicsGetCurrentContext();
-    NSLog(@"++++Context:%p",ref);
-
     //边宽
     CGFloat lineWidth = 3.0f;
     //半径
@@ -36,10 +33,6 @@
     [path addLineToPoint:center];
     CGContextAddPath(ref, path.CGPath);
     CGContextDrawPath(ref, kCGPathFillStroke);
-
-    //得到一张新图片
-    UIImage * newImage = UIGraphicsGetImageFromCurrentImageContext();
-    UIGraphicsEndImageContext();
 }
 
 @end
