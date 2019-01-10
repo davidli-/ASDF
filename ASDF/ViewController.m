@@ -11,6 +11,7 @@
 #import <objc/runtime.h>
 #import "AnimateClickedView.h"
 #import "ASDFDownloadController.h"
+#import "ASDFResponsibleLabel.h"
 
 static void *mAssociateObjKey = &mAssociateObjKey;
 
@@ -20,6 +21,8 @@ static void *mAssociateObjKey = &mAssociateObjKey;
     int count;
 }
 @property (nonatomic, strong) AnimateClickedView *animateView;
+@property (weak, nonatomic) IBOutlet ASDFResponsibleLabel *mResponsibleLabel;
+
 @end
 
 @implementation ViewController
@@ -153,4 +156,18 @@ static void *mAssociateObjKey = &mAssociateObjKey;
 }
 
 #pragma mark -Business
+- (UIViewController *)findSuperControllerForView:(UIView *)view
+{
+    UIViewController *resultController;
+
+    for (UIView *next = view; next; next = [next superview]) {
+        UIResponder *responder = [next nextResponder];
+        NSLog(@"++++Class:%@",[responder class]);
+        if ([responder isKindOfClass:[UIViewController class]]) {
+            resultController = (UIViewController*)responder;
+        }
+    }
+    NSLog(@"++++Equal Self?:%@",[resultController isEqual:self] ? @"YES" : @"NO");
+    return resultController;
+}
 @end
