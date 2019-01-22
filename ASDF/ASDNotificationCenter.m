@@ -92,28 +92,32 @@ static ASDNotificationCenter *mDefaultCenter;
     if (!aName) {
         return;
     }
-    ASDNotificationModel *resultModel;
+    //存储匹配到的通知实体
+    NSMutableArray *retArr = [NSMutableArray array];
+    
     NSMutableSet *modelsSet = self.mObserverDic[aName];
     for (ASDNotificationModel *model in modelsSet) {
         if ([model.name isEqualToString:aName] &&
             ((anObject && [anObject isEqual:model.object]) || (!anObject && !model.object))) {
-            resultModel = model;
+            [retArr addObject:model];
             break;
         }
     }
-    if (!resultModel) {
+    if (!retArr.count) {
         return;
     }
     //判断是通过哪种方式监听的通知
-    if (resultModel.block) {
-        NSOperationQueue *queue = resultModel.queue;
-        NSBlockOperation *operation = [NSBlockOperation blockOperationWithBlock:^{
-            ASDNotification *notification = [[ASDNotification alloc] initWithName:aName object:nil userInfo:nil];
-            resultModel.block(notification);
-        }];
-        [queue addOperation:operation];
-    }else{
-        [resultModel.observer performSelector:resultModel.selector withObject:resultModel.object];
+    for (ASDNotificationModel *model in retArr) {
+        if (model.block) {
+            NSOperationQueue *queue = model.queue;
+            NSBlockOperation *operation = [NSBlockOperation blockOperationWithBlock:^{
+                ASDNotification *notification = [[ASDNotification alloc] initWithName:aName object:model.object userInfo:nil];
+                model.block(notification);
+            }];
+            [queue addOperation:operation];
+        }else{
+            [model.observer performSelector:model.selector withObject:model.object];
+        }
     }
 }
 
