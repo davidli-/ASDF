@@ -10,6 +10,10 @@
 #import <UserNotifications/UserNotifications.h>
 #import "ASDNotificationCenter.h"
 
+#ifdef DEBUG
+#import <DoraemonKit/DoraemonManager.h>
+#endif
+
 @interface AppDelegate()<UNUserNotificationCenterDelegate>
 
 @end
@@ -32,6 +36,10 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 //        NSURLCache;
 //        CAShapeLayer;
 
+#ifdef DEBUG
+    [[DoraemonManager shareInstance] install];
+#endif
+    
     return YES;
 }
 
