@@ -22,6 +22,7 @@ static void *mAssociateObjKey = &mAssociateObjKey;
 }
 @property (nonatomic, strong) AnimateClickedView *animateView;
 @property (weak, nonatomic) IBOutlet ASDFResponsibleLabel *mResponsibleLabel;
+@property (weak, nonatomic) IBOutlet UIButton *mBtn3;
 
 @end
 
@@ -154,6 +155,11 @@ static void *mAssociateObjKey = &mAssociateObjKey;
             }
         }];
 }
+
+- (IBAction)onHandle3:(id)sender {
+   
+}
+
 
 #pragma mark -Business
 - (UIViewController *)findSuperControllerForView:(UIView *)view
