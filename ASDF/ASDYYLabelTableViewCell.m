@@ -22,15 +22,9 @@
 
 - (void)configureWithChatMessage:(ASDFChatMessage *)message
 {
-    if (_isCongigured) {
-        return;
-    }
-    
     _label.displaysAsynchronously = YES;
     _label.ignoreCommonProperties = YES;
     _label.preferredMaxLayoutWidth = self.size.width;
     _label.textLayout = message.layout;
-    
-    _isCongigured = YES;
 }
 @end

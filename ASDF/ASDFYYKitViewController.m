@@ -69,10 +69,8 @@ UITableViewDataSource>
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
     ASDYYLabelTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
-    if (!cell.isCongigured) {
-        ASDFChatMessage *mess = [self.mDatasource chatMessAtIndexPath:indexPath];
-        [cell configureWithChatMessage:mess];
-    }
+    ASDFChatMessage *mess = [self.mDatasource chatMessAtIndexPath:indexPath];
+    [cell configureWithChatMessage:mess];
     
     return cell;
 }

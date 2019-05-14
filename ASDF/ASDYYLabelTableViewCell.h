@@ -15,7 +15,6 @@ NS_ASSUME_NONNULL_BEGIN
 @interface ASDYYLabelTableViewCell : UITableViewCell
 
 @property (weak, nonatomic) IBOutlet YYLabel *label;
-@property (nonatomic, assign) BOOL isCongigured;
 
 - (void)configureWithChatMessage:(ASDFChatMessage*)message;
 

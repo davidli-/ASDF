@@ -10,9 +10,9 @@
 #import <UserNotifications/UserNotifications.h>
 #import "ASDNotificationCenter.h"
 
-#ifdef DEBUG
-#import <DoraemonKit/DoraemonManager.h>
-#endif
+//#ifdef DEBUG
+//#import <DoraemonKit/DoraemonManager.h>
+//#endif
 
 @interface AppDelegate()<UNUserNotificationCenterDelegate>
 
@@ -36,9 +36,11 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 //        NSURLCache;
 //        CAShapeLayer;
 
-#ifdef DEBUG
-    [[DoraemonManager shareInstance] install];
-#endif
+//#ifdef DEBUG
+//    [[DoraemonManager shareInstance] install];
+//#endif
+    
+    [UINavigationBar appearance].barTintColor = [UIColor colorWithRed:1.0 green:96/255.0 blue:34/255.0 alpha:1];
     
     return YES;
 }
