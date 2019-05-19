@@ -69,6 +69,12 @@
 		0ACB6D6421E3B3DB001B6E08 /* ASDLayerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ACB6D6321E3B3DB001B6E08 /* ASDLayerController.m */; };
 		0AD56CA1227C6EAB009ED0BF /* ASDFYYDatasource.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AD56CA0227C6EAB009ED0BF /* ASDFYYDatasource.m */; };
 		0AD56CA4227C74F8009ED0BF /* ASDFChatMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AD56CA3227C74F8009ED0BF /* ASDFChatMessage.m */; };
+		0AD7417A22919A8700970F87 /* simple.xml in Resources */ = {isa = PBXBuildFile; fileRef = 0AD7417922919A8700970F87 /* simple.xml */; };
+		0AD7417D22919AB900970F87 /* XMLTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AD7417C22919AB900970F87 /* XMLTool.m */; };
+		0AD7418022919FAA00970F87 /* Food.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AD7417F22919FAA00970F87 /* Food.m */; };
+		0AD741832291B6B100970F87 /* XMLViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AD741822291B6B100970F87 /* XMLViewController.m */; };
+		0AD741872291BAA800970F87 /* XMLTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AD741852291BAA800970F87 /* XMLTableViewCell.m */; };
+		0AD741882291BAA800970F87 /* XMLTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AD741862291BAA800970F87 /* XMLTableViewCell.xib */; };
 		0ADA67661FC9823200F72090 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ADA67651FC9823200F72090 /* Person.m */; };
 		0ADA676A1FCD9AD300F72090 /* ExceptionHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ADA67691FCD9AD300F72090 /* ExceptionHandler.m */; };
 		0ADA787021A1AF3F0055DA44 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0ADA787221A1AF3F0055DA44 /* Localizable.strings */; };
@@ -224,6 +230,16 @@
 		0AD56CA0227C6EAB009ED0BF /* ASDFYYDatasource.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ASDFYYDatasource.m; sourceTree = "<group>"; };
 		0AD56CA2227C74F8009ED0BF /* ASDFChatMessage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ASDFChatMessage.h; sourceTree = "<group>"; };
 		0AD56CA3227C74F8009ED0BF /* ASDFChatMessage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ASDFChatMessage.m; sourceTree = "<group>"; };
+		0AD7417922919A8700970F87 /* simple.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = simple.xml; sourceTree = SOURCE_ROOT; };
+		0AD7417B22919AB900970F87 /* XMLTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XMLTool.h; sourceTree = "<group>"; };
+		0AD7417C22919AB900970F87 /* XMLTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XMLTool.m; sourceTree = "<group>"; };
+		0AD7417E22919FAA00970F87 /* Food.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Food.h; sourceTree = "<group>"; };
+		0AD7417F22919FAA00970F87 /* Food.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Food.m; sourceTree = "<group>"; };
+		0AD741812291B6B100970F87 /* XMLViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XMLViewController.h; sourceTree = "<group>"; };
+		0AD741822291B6B100970F87 /* XMLViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XMLViewController.m; sourceTree = "<group>"; };
+		0AD741842291BAA800970F87 /* XMLTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XMLTableViewCell.h; sourceTree = "<group>"; };
+		0AD741852291BAA800970F87 /* XMLTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XMLTableViewCell.m; sourceTree = "<group>"; };
+		0AD741862291BAA800970F87 /* XMLTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XMLTableViewCell.xib; sourceTree = "<group>"; };
 		0ADA67641FC9823200F72090 /* Person.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
 		0ADA67651FC9823200F72090 /* Person.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
 		0ADA67681FCD9AD300F72090 /* ExceptionHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExceptionHandler.h; sourceTree = "<group>"; };
@@ -658,6 +674,23 @@
 			name = INIT;
 			sourceTree = "<group>";
 		};
+		0AD74178229199B200970F87 /* XML */ = {
+			isa = PBXGroup;
+			children = (
+				0AD741812291B6B100970F87 /* XMLViewController.h */,
+				0AD741822291B6B100970F87 /* XMLViewController.m */,
+				0AD7417B22919AB900970F87 /* XMLTool.h */,
+				0AD7417C22919AB900970F87 /* XMLTool.m */,
+				0AD7417922919A8700970F87 /* simple.xml */,
+				0AD7417E22919FAA00970F87 /* Food.h */,
+				0AD7417F22919FAA00970F87 /* Food.m */,
+				0AD741842291BAA800970F87 /* XMLTableViewCell.h */,
+				0AD741852291BAA800970F87 /* XMLTableViewCell.m */,
+				0AD741862291BAA800970F87 /* XMLTableViewCell.xib */,
+			);
+			name = XML;
+			sourceTree = "<group>";
+		};
 		0ADA67671FCD9A0100F72090 /* Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -667,6 +700,7 @@
 				0ABD9EAC1F274C1C00DF4D4C /* ViewControllerII.m */,
 				0A2D299821E4EF880050188E /* ASDFRestorationViewController.h */,
 				0A2D299921E4EF880050188E /* ASDFRestorationViewController.m */,
+				0AD74178229199B200970F87 /* XML */,
 				0A2D3F9C229190AC006A2727 /* Program */,
 				0A72E3EA2289A18600B8F13A /* DataTask */,
 				0AB28D2E227B4E30003DBB79 /* YYKit */,
@@ -840,12 +874,14 @@
 				0A9BF5B31F274683008C5F70 /* LaunchScreen.storyboard in Resources */,
 				0A7FD499227C571A00A02EBB /* ASDYYLabelTableViewCell.xib in Resources */,
 				0ADA787021A1AF3F0055DA44 /* Localizable.strings in Resources */,
+				0AD7417A22919A8700970F87 /* simple.xml in Resources */,
 				0AB28D2C227B487C003DBB79 /* github.jpg in Resources */,
 				0A68206821A448E100687A8C /* Folder reference in Resources */,
 				0AB28D2D227B487C003DBB79 /* logo.png in Resources */,
 				0ABBD6A12289C2FA008DDE1A /* 苏小艾.mp3 in Resources */,
 				0A9BF5B01F274683008C5F70 /* Assets.xcassets in Resources */,
 				0A9BF5AE1F274683008C5F70 /* Main.storyboard in Resources */,
+				0AD741882291BAA800970F87 /* XMLTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -954,6 +990,7 @@
 				0A9BF5A81F274683008C5F70 /* AppDelegate.m in Sources */,
 				0A1EB87F218DFE89005B6B54 /* ASDFThread.m in Sources */,
 				0A6D450D21CCE4EE00257A42 /* ASDFThreadHelper.m in Sources */,
+				0AD741872291BAA800970F87 /* XMLTableViewCell.m in Sources */,
 				0AC86E4F1FED265800098A24 /* SessionTaskViewController.m in Sources */,
 				0A9EFA1B21DE418B003287FB /* ASDFResponsibleLabel.m in Sources */,
 				0AC51A632199F38F005B3CBE /* Model.m in Sources */,
@@ -967,6 +1004,7 @@
 				0A8108822134328A004A886C /* UIView+XIB.m in Sources */,
 				0A9EFA1E21DE6C24003287FB /* ASDFSingleton.m in Sources */,
 				0A2D299A21E4EF880050188E /* ASDFRestorationViewController.m in Sources */,
+				0AD741832291B6B100970F87 /* XMLViewController.m in Sources */,
 				0A88907E21C2BE2F00297D87 /* RuntimeTest.m in Sources */,
 				0ADA67661FC9823200F72090 /* Person.m in Sources */,
 				0A5BB07021342E7600283890 /* UIViewInspectable.m in Sources */,
@@ -974,6 +1012,7 @@
 				0A2D299721E4EA520050188E /* ASDFDownloadController.m in Sources */,
 				0A2250EB21C9254700EAA29F /* MainThreadStuckedObserverTool.m in Sources */,
 				0AC86E461FEC112E00098A24 /* DataTaskTool.m in Sources */,
+				0AD7417D22919AB900970F87 /* XMLTool.m in Sources */,
 				0ABD9EAD1F274C1C00DF4D4C /* ViewControllerII.m in Sources */,
 				0AD56CA4227C74F8009ED0BF /* ASDFChatMessage.m in Sources */,
 				0AE158561F515BCA00740EDE /* NSObject+JsonToModel.m in Sources */,
@@ -985,6 +1024,7 @@
 				0A24DDAA219B0E6B0012B4B6 /* SubModel.m in Sources */,
 				0ABBD69A2289C05E008DDE1A /* ASDTableViewDatasource.m in Sources */,
 				0AD56CA1227C6EAB009ED0BF /* ASDFYYDatasource.m in Sources */,
+				0AD7418022919FAA00970F87 /* Food.m in Sources */,
 				0A7FD498227C571A00A02EBB /* ASDYYLabelTableViewCell.m in Sources */,
 				0AC86E551FEEA6B000098A24 /* Initializer.m in Sources */,
 				0A9BF5A51F274683008C5F70 /* main.m in Sources */,
