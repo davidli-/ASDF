@@ -27,6 +27,12 @@ static void *mAssociateObjKey = &mAssociateObjKey;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    //结构体
+    struct ADate adate = {2019,05,10};
+    adate.year = 2019;
+    adate.month = 05;
+    adate.day = 10;
 }
 
 -(void)viewWillAppear:(BOOL)animated{
