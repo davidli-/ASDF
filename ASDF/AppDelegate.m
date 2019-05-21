@@ -9,11 +9,6 @@
 #import "AppDelegate.h"
 #import <UserNotifications/UserNotifications.h>
 #import "ASDNotificationCenter.h"
-#import "XMLViewController.h"
-
-//#ifdef DEBUG
-//#import <DoraemonKit/DoraemonManager.h>
-//#endif
 
 @interface AppDelegate()<UNUserNotificationCenterDelegate>
 
@@ -36,15 +31,8 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 //        NSCache;
 //        NSURLCache;
 //        CAShapeLayer;
-
-//#ifdef DEBUG
-//    [[DoraemonManager shareInstance] install];
-//#endif
     
     [UINavigationBar appearance].barTintColor = [UIColor colorWithRed:1.0 green:96/255.0 blue:34/255.0 alpha:1];
-    
-    _window.rootViewController = [[XMLViewController alloc] init];
-    [_window makeKeyWindow];
     
     return YES;
 }

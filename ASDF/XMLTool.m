@@ -58,6 +58,10 @@ static NSString *K_CALORIES = @"calories";
 
 - (void)start
 {
+    //防止多次调用 数据累积
+    [_mDataArr removeAllObjects];
+    _mTag = nil;
+    
     NSURL *pathUrl = [[NSBundle mainBundle] URLForResource:@"simple" withExtension:@"xml"];
     NSXMLParser *parser = [[NSXMLParser alloc] initWithContentsOfURL:pathUrl];
     parser.delegate = self;

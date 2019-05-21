@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ASDTabBarController"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="ASDTabBar">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WsD-jX-fSH" userLabel="中线">
+                    <rect key="frame" x="207" y="0.0" width="0.0" height="0.0"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BDh-vv-qkF">
+                    <rect key="frame" x="30" y="437" width="27" height="22"/>
+                    <state key="normal" image="btn_home_n.png"/>
+                    <state key="selected" image="btn_home_n.png"/>
+                    <connections>
+                        <action selector="onAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="6Fb-m5-5tD"/>
+                    </connections>
+                </button>
+                <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7oQ-OH-fQZ">
+                    <rect key="frame" x="357" y="437" width="27" height="22"/>
+                    <state key="normal" image="btn_user_n.png"/>
+                    <state key="selected" image="btn_user_p.png"/>
+                    <connections>
+                        <action selector="onAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="hpS-gK-TCz"/>
+                    </connections>
+                </button>
+                <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nFu-aW-A3O">
+                    <rect key="frame" x="182" y="-25" width="50" height="50"/>
+                    <state key="normal" image="1.png"/>
+                    <state key="selected" image="1.png"/>
+                    <connections>
+                        <action selector="onAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="f7g-Gv-fRK"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="0.37647058820000001" blue="0.1333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="7oQ-OH-fQZ" secondAttribute="trailing" constant="30" id="2CM-pv-KpF"/>
+                <constraint firstItem="nFu-aW-A3O" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="5ng-j8-Esa"/>
+                <constraint firstItem="BDh-vv-qkF" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="30" id="Dw4-qd-DTX"/>
+                <constraint firstItem="7oQ-OH-fQZ" firstAttribute="centerY" secondItem="BDh-vv-qkF" secondAttribute="centerY" id="MCC-sw-078"/>
+                <constraint firstItem="nFu-aW-A3O" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="BDh-vv-qkF" secondAttribute="trailing" constant="10" id="OT7-Ww-Beu"/>
+                <constraint firstItem="7oQ-OH-fQZ" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="nFu-aW-A3O" secondAttribute="trailing" constant="10" id="Q2m-AT-un8"/>
+                <constraint firstItem="WsD-jX-fSH" firstAttribute="centerY" secondItem="nFu-aW-A3O" secondAttribute="centerY" id="Wq5-PR-cfe"/>
+                <constraint firstItem="WsD-jX-fSH" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="fcx-iF-Ui8"/>
+                <constraint firstItem="WsD-jX-fSH" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="mk1-S7-b5s"/>
+                <constraint firstItem="BDh-vv-qkF" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="yJJ-Lp-7pZ"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="btn1" destination="BDh-vv-qkF" id="DRV-PY-84n"/>
+                <outlet property="btn2" destination="nFu-aW-A3O" id="YeG-sL-dYz"/>
+                <outlet property="btn3" destination="7oQ-OH-fQZ" id="vyK-M0-UeO"/>
+            </connections>
+        </view>
+    </objects>
+    <resources>
+        <image name="1.png" width="50" height="50"/>
+        <image name="btn_home_n.png" width="27" height="22"/>
+        <image name="btn_user_n.png" width="27" height="22"/>
+        <image name="btn_user_p.png" width="27" height="22"/>
+    </resources>
+</document>
