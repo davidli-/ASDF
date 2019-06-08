@@ -36,8 +36,6 @@ UITableViewDelegate
     [_mTableView registerNib:[UINib nibWithNibName:@"XMLTableViewCell" bundle:nil] forCellReuseIdentifier:@"cell"];
     
     [self.view addSubview:_mTableView];
-    
-    _mTableView.frame = self.view.frame;
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{

@@ -47,6 +47,11 @@
 		0A72E3F12289A86D00B8F13A /* ASDTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A72E3F02289A86D00B8F13A /* ASDTableViewCell.m */; };
 		0A72E3F42289AE7500B8F13A /* ASDTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A72E3F32289AE7500B8F13A /* ASDTableViewController.m */; };
 		0A78A7E621ECC1B900A27718 /* People.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A78A7E521ECC1B900A27718 /* People.m */; };
+		0A7F3757229AD3B40010AFCB /* RACTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A7F3756229AD3B40010AFCB /* RACTableViewController.m */; };
+		0A7F375B229AD40E0010AFCB /* RACTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A7F375A229AD40E0010AFCB /* RACTableViewCell.m */; };
+		0A7F3761229AD4890010AFCB /* RACTableViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A7F3760229AD4890010AFCB /* RACTableViewModel.m */; };
+		0A7F3764229AD4D90010AFCB /* RACModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A7F3763229AD4D90010AFCB /* RACModel.m */; };
+		0A7F3767229AD6330010AFCB /* RACNetworker.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A7F3766229AD6330010AFCB /* RACNetworker.m */; };
 		0A7FD498227C571A00A02EBB /* ASDYYLabelTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A7FD496227C571A00A02EBB /* ASDYYLabelTableViewCell.m */; };
 		0A7FD499227C571A00A02EBB /* ASDYYLabelTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A7FD497227C571A00A02EBB /* ASDYYLabelTableViewCell.xib */; };
 		0A7FD49E227C589E00A02EBB /* ASDFTextMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A7FD49D227C589E00A02EBB /* ASDFTextMaker.m */; };
@@ -90,6 +95,7 @@
 		0ADA67661FC9823200F72090 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ADA67651FC9823200F72090 /* Person.m */; };
 		0ADA676A1FCD9AD300F72090 /* ExceptionHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ADA67691FCD9AD300F72090 /* ExceptionHandler.m */; };
 		0ADA787021A1AF3F0055DA44 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0ADA787221A1AF3F0055DA44 /* Localizable.strings */; };
+		0ADC7C582295A385001BC1C6 /* HelloRACController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ADC7C572295A385001BC1C6 /* HelloRACController.m */; };
 		0ADE405321D2645100D6B092 /* ASDFCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ADE405221D2645100D6B092 /* ASDFCollectionViewController.m */; };
 		0AE158441F45C31400740EDE /* RuntimeTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AE158431F45C31400740EDE /* RuntimeTool.m */; };
 		0AE158471F45E0E400740EDE /* NSMutableArray+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AE158461F45E0E400740EDE /* NSMutableArray+Extension.m */; };
@@ -192,6 +198,16 @@
 		0A72E3F32289AE7500B8F13A /* ASDTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ASDTableViewController.m; sourceTree = "<group>"; };
 		0A78A7E421ECC1B900A27718 /* People.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = People.h; sourceTree = "<group>"; };
 		0A78A7E521ECC1B900A27718 /* People.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = People.m; sourceTree = "<group>"; };
+		0A7F3755229AD3B40010AFCB /* RACTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RACTableViewController.h; sourceTree = "<group>"; };
+		0A7F3756229AD3B40010AFCB /* RACTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RACTableViewController.m; sourceTree = "<group>"; };
+		0A7F3759229AD40E0010AFCB /* RACTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RACTableViewCell.h; sourceTree = "<group>"; };
+		0A7F375A229AD40E0010AFCB /* RACTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RACTableViewCell.m; sourceTree = "<group>"; };
+		0A7F375F229AD4890010AFCB /* RACTableViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RACTableViewModel.h; sourceTree = "<group>"; };
+		0A7F3760229AD4890010AFCB /* RACTableViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RACTableViewModel.m; sourceTree = "<group>"; };
+		0A7F3762229AD4D90010AFCB /* RACModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RACModel.h; sourceTree = "<group>"; };
+		0A7F3763229AD4D90010AFCB /* RACModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RACModel.m; sourceTree = "<group>"; };
+		0A7F3765229AD6330010AFCB /* RACNetworker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RACNetworker.h; sourceTree = "<group>"; };
+		0A7F3766229AD6330010AFCB /* RACNetworker.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RACNetworker.m; sourceTree = "<group>"; };
 		0A7FD495227C571A00A02EBB /* ASDYYLabelTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ASDYYLabelTableViewCell.h; sourceTree = "<group>"; };
 		0A7FD496227C571A00A02EBB /* ASDYYLabelTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ASDYYLabelTableViewCell.m; sourceTree = "<group>"; };
 		0A7FD497227C571A00A02EBB /* ASDYYLabelTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ASDYYLabelTableViewCell.xib; sourceTree = "<group>"; };
@@ -272,6 +288,8 @@
 		0ADA67691FCD9AD300F72090 /* ExceptionHandler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExceptionHandler.m; sourceTree = "<group>"; };
 		0ADA787121A1AF3F0055DA44 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		0ADA787321A1AF900055DA44 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		0ADC7C562295A385001BC1C6 /* HelloRACController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HelloRACController.h; sourceTree = "<group>"; };
+		0ADC7C572295A385001BC1C6 /* HelloRACController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HelloRACController.m; sourceTree = "<group>"; };
 		0ADE405121D2645100D6B092 /* ASDFCollectionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ASDFCollectionViewController.h; sourceTree = "<group>"; };
 		0ADE405221D2645100D6B092 /* ASDFCollectionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ASDFCollectionViewController.m; sourceTree = "<group>"; };
 		0AE158421F45C31400740EDE /* RuntimeTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RuntimeTool.h; sourceTree = "<group>"; };
@@ -529,6 +547,47 @@
 			name = TableView;
 			sourceTree = "<group>";
 		};
+		0A7F3758229AD3D60010AFCB /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				0A7F375E229AD4570010AFCB /* Model */,
+				0A7F375C229AD4140010AFCB /* View */,
+				0A7F375D229AD4360010AFCB /* ViewModel */,
+			);
+			name = TableView;
+			sourceTree = "<group>";
+		};
+		0A7F375C229AD4140010AFCB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0A7F3755229AD3B40010AFCB /* RACTableViewController.h */,
+				0A7F3756229AD3B40010AFCB /* RACTableViewController.m */,
+				0A7F3759229AD40E0010AFCB /* RACTableViewCell.h */,
+				0A7F375A229AD40E0010AFCB /* RACTableViewCell.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		0A7F375D229AD4360010AFCB /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				0A7F375F229AD4890010AFCB /* RACTableViewModel.h */,
+				0A7F3760229AD4890010AFCB /* RACTableViewModel.m */,
+				0A7F3765229AD6330010AFCB /* RACNetworker.h */,
+				0A7F3766229AD6330010AFCB /* RACNetworker.m */,
+			);
+			name = ViewModel;
+			sourceTree = "<group>";
+		};
+		0A7F375E229AD4570010AFCB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0A7F3762229AD4D90010AFCB /* RACModel.h */,
+				0A7F3763229AD4D90010AFCB /* RACModel.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		0A7FD49A227C586200A02EBB /* Cell */ = {
 			isa = PBXGroup;
 			children = (
@@ -747,6 +806,7 @@
 				0ABD9EAC1F274C1C00DF4D4C /* ViewControllerII.m */,
 				0A2D299821E4EF880050188E /* ASDFRestorationViewController.h */,
 				0A2D299921E4EF880050188E /* ASDFRestorationViewController.m */,
+				0ADC7C552295A2B5001BC1C6 /* RAC */,
 				0A14D2842292DBAE00ED8AEC /* TabBar */,
 				0AD74178229199B200970F87 /* XML */,
 				0A2D3F9C229190AC006A2727 /* Program */,
@@ -767,6 +827,16 @@
 				0A5BB0762134310A00283890 /* Res */,
 			);
 			name = Files;
+			sourceTree = "<group>";
+		};
+		0ADC7C552295A2B5001BC1C6 /* RAC */ = {
+			isa = PBXGroup;
+			children = (
+				0ADC7C562295A385001BC1C6 /* HelloRACController.h */,
+				0ADC7C572295A385001BC1C6 /* HelloRACController.m */,
+				0A7F3758229AD3D60010AFCB /* TableView */,
+			);
+			name = RAC;
 			sourceTree = "<group>";
 		};
 		0DADA12F80F4A8A17BF02494 /* Frameworks */ = {
@@ -972,12 +1042,14 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-ASDF/Pods-ASDF-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
+				"${BUILT_PRODUCTS_DIR}/ReactiveObjC/ReactiveObjC.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/YYKit/YYKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveObjC.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYKit.framework",
 			);
@@ -1023,11 +1095,13 @@
 				0AF3283521A1847400E25755 /* SubInitializer2.m in Sources */,
 				0AB28D33227B4E7D003DBB79 /* ASDFYYKitViewController.m in Sources */,
 				0AFB6D831F712096002B3544 /* MyWorkerClass.m in Sources */,
+				0A7F3761229AD4890010AFCB /* RACTableViewModel.m in Sources */,
 				0A2D3F9B2291826E006A2727 /* Bank.m in Sources */,
 				0AE158501F5089A900740EDE /* IvarTool.m in Sources */,
 				0A3B2E1521DFA93700C88476 /* ASDNotificationCenter.m in Sources */,
 				0A40BD7721946F8800BD03A1 /* CustomLayer.m in Sources */,
 				0A72E3F42289AE7500B8F13A /* ASDTableViewController.m in Sources */,
+				0A7F375B229AD40E0010AFCB /* RACTableViewCell.m in Sources */,
 				0A01B90A1FBF0DAD00250B19 /* NetOperation.m in Sources */,
 				0A9EFA1821DE4158003287FB /* ASDFBlueView.m in Sources */,
 				0A72E3F12289A86D00B8F13A /* ASDTableViewCell.m in Sources */,
@@ -1036,6 +1110,7 @@
 				0A1EB87F218DFE89005B6B54 /* ASDFThread.m in Sources */,
 				0A6D450D21CCE4EE00257A42 /* ASDFThreadHelper.m in Sources */,
 				0AD741872291BAA800970F87 /* XMLTableViewCell.m in Sources */,
+				0A7F3764229AD4D90010AFCB /* RACModel.m in Sources */,
 				0AC86E4F1FED265800098A24 /* SessionTaskViewController.m in Sources */,
 				0A9EFA1B21DE418B003287FB /* ASDFResponsibleLabel.m in Sources */,
 				0AC51A632199F38F005B3CBE /* Model.m in Sources */,
@@ -1049,9 +1124,12 @@
 				0A8108822134328A004A886C /* UIView+XIB.m in Sources */,
 				0A14D28C2292DD6500ED8AEC /* ASDTabBar.m in Sources */,
 				0A9EFA1E21DE6C24003287FB /* ASDFSingleton.m in Sources */,
+				0A7F3757229AD3B40010AFCB /* RACTableViewController.m in Sources */,
+				0A7F3767229AD6330010AFCB /* RACNetworker.m in Sources */,
 				0A2D299A21E4EF880050188E /* ASDFRestorationViewController.m in Sources */,
 				0AD741832291B6B100970F87 /* XMLViewController.m in Sources */,
 				0A88907E21C2BE2F00297D87 /* RuntimeTest.m in Sources */,
+				0ADC7C582295A385001BC1C6 /* HelloRACController.m in Sources */,
 				0ADA67661FC9823200F72090 /* Person.m in Sources */,
 				0A5BB07021342E7600283890 /* UIViewInspectable.m in Sources */,
 				0A3CFDB221CFD0E700E07AB6 /* Card.m in Sources */,
@@ -1352,7 +1430,7 @@
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = D7FS892R5K;
 				ENABLE_STRICT_OBJC_MSGSEND = NO;
-				GCC_PREFIX_HEADER = "$PROJECT_DIR/ASDF/PrefixHeader.pch";
+				GCC_PREFIX_HEADER = $PROJECT_DIR/ASDF/PrefixHeader.pch;
 				INFOPLIST_FILE = ASDF/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1376,7 +1454,7 @@
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = D7FS892R5K;
 				ENABLE_STRICT_OBJC_MSGSEND = NO;
-				GCC_PREFIX_HEADER = "$PROJECT_DIR/ASDF/PrefixHeader.pch";
+				GCC_PREFIX_HEADER = $PROJECT_DIR/ASDF/PrefixHeader.pch;
 				INFOPLIST_FILE = ASDF/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1443,7 +1521,7 @@
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = D7FS892R5K;
 				ENABLE_STRICT_OBJC_MSGSEND = NO;
-				GCC_PREFIX_HEADER = "$PROJECT_DIR/ASDF/PrefixHeader.pch";
+				GCC_PREFIX_HEADER = $PROJECT_DIR/ASDF/PrefixHeader.pch;
 				INFOPLIST_FILE = ASDF/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

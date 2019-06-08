@@ -8,11 +8,10 @@
 
 #import "ViewController.h"
 #import "ViewControllerII.h"
-#import <objc/runtime.h>
-#import "AnimateClickedView.h"
 #import "ASDFDownloadController.h"
 #import "ASDFResponsibleLabel.h"
 #import "ASDTableViewController.h"
+#import "RACTableViewController.h"
 
 static void *mAssociateObjKey = &mAssociateObjKey;
 
@@ -102,7 +101,8 @@ static void *mAssociateObjKey = &mAssociateObjKey;
 }
 
 - (IBAction)onHandle3:(id)sender {
-   
+    RACTableViewController *controller = [[RACTableViewController alloc] init];
+    [self.navigationController pushViewController:controller animated:YES];
 }
 
 

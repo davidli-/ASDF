@@ -21,8 +21,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [[ASDNotificationCenter defaultCenter] addObserver:self selector:@selector(onNotification:) name:@"ANotification" object:@"Hello"];
-    [[ASDNotificationCenter defaultCenter] addObserver:self selector:@selector(onNotification:) name:@"ANotification" object:@"Hello"];
+//    [[ASDNotificationCenter defaultCenter] addObserver:self selector:@selector(onNotification:) name:@"ANotification" object:@"Hello"];
+//    [[ASDNotificationCenter defaultCenter] addObserver:self selector:@selector(onNotification:) name:@"ANotification" object:@"Hello"];
 }
 - (void)onNotification:(id)notification
 {
@@ -77,8 +77,17 @@
 
 - (IBAction)onDismiss:(id)sender
 {
+    //RAC回调
+    if (self.delegate) {
+        [self.delegate sendNext:@"++ViewControllerII Closed~"];
+    }
+    //关闭
     if (self.navigationController) {
-        [self.navigationController dismissViewControllerAnimated:YES completion:NULL];
+        if (self.navigationController.viewControllers.count > 1) {
+            [self.navigationController popViewControllerAnimated:YES];
+        }else{
+            [self.navigationController dismissViewControllerAnimated:YES completion:NULL];
+        }
     }else{
         [self dismissViewControllerAnimated:YES completion:NULL];
     }
