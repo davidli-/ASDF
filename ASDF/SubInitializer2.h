@@ -6,11 +6,11 @@
 //  Copyright © 2018 Macmafia. All rights reserved.
 //
 
-#import "Initializer.h"
+#import "SubInitializer.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface SubInitializer2 : Initializer
+@interface SubInitializer2 : SubInitializer
 
 @end
 

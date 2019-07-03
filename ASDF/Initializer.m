@@ -16,7 +16,7 @@ NSMutableDictionary *paramDic = nil;
 
 //+ (void)load{
 //    NSLog(@"++++ super loaded~");
-//    paramDic = [NSMutableDictionary dictionaryWithDictionary:@{@"k":@"value"}];
+//    //paramDic = [NSMutableDictionary dictionaryWithDictionary:@{@"k":@"value"}];
 //}
 
 +(void)initialize

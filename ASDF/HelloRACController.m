@@ -40,7 +40,7 @@
     RACSignal *s1 = [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
         
         //当有订阅者订阅信号，就会调用此block
-        _subscriber = subscriber;
+//        _subscriber = subscriber;
         
         //1.3.发送信号
         [subscriber sendNext:@"Hello from s1~"];
@@ -82,7 +82,7 @@
     }];
     
     //发送事件
-    [_subscriber sendNext:@"Hello2 from s1~"];
+//    [_subscriber sendNext:@"Hello2 from s1~"];
     
     //1.4.连接类(单次订阅之后不会立刻收到回调，所有订阅完成后调用 connect 时才会先后触发)
     RACSignal *s2 = [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
@@ -223,19 +223,20 @@
     RACSignal *signal1 = [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
         NSLog(@"+++call signal1 block");
         [subscriber sendNext:@"1.1"];
-        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [[RACScheduler mainThreadScheduler] afterDelay:2 schedule:^{
             [subscriber sendNext:@"1.2"];
             [subscriber sendCompleted];
-        });
+        }];
+        
         return nil;
     }];
     RACSignal *signal2 = [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
         NSLog(@"+++call signal2 block");
         [subscriber sendNext:@"2.1"];
-        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [[RACScheduler mainThreadScheduler] afterDelay:2 schedule:^{
             [subscriber sendNext:@"2.2"];
             [subscriber sendCompleted];
-        });
+        }];
         return nil;
     }];
     RACSignal *signal3 = [signal1 concat:signal2];
@@ -439,21 +440,48 @@
 }
 
 - (IBAction)onAction13:(id)sender {
+    RACSubject *sub = [RACSubject subject];
+    [sub sendNext:@"1"];
     
+    [sub subscribeNext:^(id x) {
+        NSLog(@"+++sub1:%@",x);
+    }];
+    
+    [sub sendNext:@"2"];
+    
+    [sub subscribeNext:^(id x) {
+        NSLog(@"+++sub2:%@",x);
+    }];
+    
+    [sub sendNext:@"3"];
 }
 
 - (IBAction)onAction14:(id)sender {
-    //1.创建信号
-    RACSignal *s1 = [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
-        //^didSubscribe中执行任务
+    //1.4.连接类(单次订阅之后不会立刻收到回调，所有订阅完成后调用 connect 时才会先后触发)
+    RACSignal *s2 = [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+        [subscriber sendNext:@"Hello from s2~"];
+        [subscriber sendCompleted];
         return [RACDisposable disposableWithBlock:^{
-            //清理资源
+            NSLog(@"++s2 Disposed~");
         }];
     }];
-    //2.订阅信号
-    [s1 subscribeNext:^(id x) {
-        NSLog(@"+++received value:%@",x);
+    
+    RACMulticastConnection *cnn = [s2 publish];
+    
+    //订阅连接类信号
+    [cnn.signal subscribeNext:^(id x) {
+        NSLog(@"~~第1个订阅消息：%@",x);
     }];
+    
+    [cnn.signal subscribeNext:^(id x) {
+        NSLog(@"~~第2个订阅消息：%@",x);
+    }];
+    
+    [cnn.signal subscribeNext:^(id x) {
+        NSLog(@"~~第3个订阅消息：%@",x);
+    }];
+    
+    [cnn connect];
 }
 
 

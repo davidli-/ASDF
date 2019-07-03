@@ -16,7 +16,7 @@ static ASDFSingleton *mSingleton = nil;
 
 @implementation ASDFSingleton
 
-//声明单例的方式1：
+// 声明单例的方式1：
 + (instancetype)shareInstance
 {
     static dispatch_once_t onceToken;
@@ -36,4 +36,16 @@ static ASDFSingleton *mSingleton = nil;
     });
     return mSingleton;
 }
+
+// 声明单例的方式2：使用同步锁
+/*
++ (instancetype)shareInstance
+{
+    @synchronized (self) {
+        mSingleton = [[ASDFSingleton alloc] init];
+        mSingleton.str = @"This is a string";//在 block 内初始化属性
+    }
+    return mSingleton;
+}
+*/
 @end

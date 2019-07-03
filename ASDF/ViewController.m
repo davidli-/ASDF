@@ -105,6 +105,10 @@ static void *mAssociateObjKey = &mAssociateObjKey;
     [self.navigationController pushViewController:controller animated:YES];
 }
 
+- (IBAction)onHandle4:(id)sender {
+}
+
+
 
 #pragma mark -Business
 - (UIViewController *)findSuperControllerForView:(UIView *)view

@@ -62,6 +62,8 @@
 		0A8889D921D7BE530058FDD4 /* ASDFCollectionViewHorizontalBaseFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A8889D821D7BE530058FDD4 /* ASDFCollectionViewHorizontalBaseFlowLayout.m */; };
 		0A88907B21C2BCEB00297D87 /* RunloopHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A88907A21C2BCEB00297D87 /* RunloopHelper.m */; };
 		0A88907E21C2BE2F00297D87 /* RuntimeTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A88907D21C2BE2F00297D87 /* RuntimeTest.m */; };
+		0A8F9AAD22C3831C0095A56E /* SubInitializer+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A8F9AAB22C3831C0095A56E /* SubInitializer+Category.m */; };
+		0A8F9AB022C386200095A56E /* SubInitializer2+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A8F9AAF22C386200095A56E /* SubInitializer2+Category.m */; };
 		0A9BF5A51F274683008C5F70 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A9BF5A41F274683008C5F70 /* main.m */; };
 		0A9BF5A81F274683008C5F70 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A9BF5A71F274683008C5F70 /* AppDelegate.m */; };
 		0A9BF5AB1F274683008C5F70 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A9BF5AA1F274683008C5F70 /* ViewController.m */; };
@@ -76,6 +78,9 @@
 		0ABBD69A2289C05E008DDE1A /* ASDTableViewDatasource.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ABBD6992289C05E008DDE1A /* ASDTableViewDatasource.m */; };
 		0ABBD69D2289C0C9008DDE1A /* ASDTableViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ABBD69C2289C0C9008DDE1A /* ASDTableViewModel.m */; };
 		0ABBD6A12289C2FA008DDE1A /* 苏小艾.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0ABBD6A02289C2FA008DDE1A /* 苏小艾.mp3 */; };
+		0ABC46C922C3D4910029EEAC /* ASDClickTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ABC46C822C3D4910029EEAC /* ASDClickTableViewCell.m */; };
+		0ABC46CD22C3D5AA0029EEAC /* ASDClickBtnInCellViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ABC46CC22C3D5AA0029EEAC /* ASDClickBtnInCellViewController.m */; };
+		0ABC46D022C3D7380029EEAC /* ASDInCellBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ABC46CF22C3D7380029EEAC /* ASDInCellBtn.m */; };
 		0ABD9EAD1F274C1C00DF4D4C /* ViewControllerII.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ABD9EAC1F274C1C00DF4D4C /* ViewControllerII.m */; };
 		0AC03A0D21E2516100290F32 /* ASDNotificationModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AC03A0C21E2516100290F32 /* ASDNotificationModel.m */; };
 		0AC3E82E21C3FAC90034CB2E /* AnimateClickedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AC3E82D21C3FAC90034CB2E /* AnimateClickedView.m */; };
@@ -227,6 +232,10 @@
 		0A88907A21C2BCEB00297D87 /* RunloopHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RunloopHelper.m; sourceTree = "<group>"; };
 		0A88907C21C2BE2F00297D87 /* RuntimeTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RuntimeTest.h; sourceTree = "<group>"; };
 		0A88907D21C2BE2F00297D87 /* RuntimeTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RuntimeTest.m; sourceTree = "<group>"; };
+		0A8F9AAB22C3831C0095A56E /* SubInitializer+Category.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "SubInitializer+Category.m"; path = "/Users/Macmafia/Desktop/工程/ASDF/ASDF/SubInitializer+Category.m"; sourceTree = "<absolute>"; };
+		0A8F9AAC22C3831C0095A56E /* SubInitializer+Category.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "SubInitializer+Category.h"; path = "/Users/Macmafia/Desktop/工程/ASDF/ASDF/SubInitializer+Category.h"; sourceTree = "<absolute>"; };
+		0A8F9AAE22C386200095A56E /* SubInitializer2+Category.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SubInitializer2+Category.h"; sourceTree = "<group>"; };
+		0A8F9AAF22C386200095A56E /* SubInitializer2+Category.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "SubInitializer2+Category.m"; sourceTree = "<group>"; };
 		0A9BF5A01F274683008C5F70 /* ASDF.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ASDF.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A9BF5A41F274683008C5F70 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		0A9BF5A61F274683008C5F70 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -251,6 +260,12 @@
 		0ABBD69B2289C0C9008DDE1A /* ASDTableViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ASDTableViewModel.h; sourceTree = "<group>"; };
 		0ABBD69C2289C0C9008DDE1A /* ASDTableViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ASDTableViewModel.m; sourceTree = "<group>"; };
 		0ABBD6A02289C2FA008DDE1A /* 苏小艾.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "苏小艾.mp3"; sourceTree = "<group>"; };
+		0ABC46C722C3D4910029EEAC /* ASDClickTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ASDClickTableViewCell.h; sourceTree = "<group>"; };
+		0ABC46C822C3D4910029EEAC /* ASDClickTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ASDClickTableViewCell.m; sourceTree = "<group>"; };
+		0ABC46CB22C3D5AA0029EEAC /* ASDClickBtnInCellViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ASDClickBtnInCellViewController.h; sourceTree = "<group>"; };
+		0ABC46CC22C3D5AA0029EEAC /* ASDClickBtnInCellViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ASDClickBtnInCellViewController.m; sourceTree = "<group>"; };
+		0ABC46CE22C3D7380029EEAC /* ASDInCellBtn.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ASDInCellBtn.h; sourceTree = "<group>"; };
+		0ABC46CF22C3D7380029EEAC /* ASDInCellBtn.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ASDInCellBtn.m; sourceTree = "<group>"; };
 		0ABD9EAB1F274C1C00DF4D4C /* ViewControllerII.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewControllerII.h; sourceTree = "<group>"; };
 		0ABD9EAC1F274C1C00DF4D4C /* ViewControllerII.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewControllerII.m; sourceTree = "<group>"; };
 		0AC03A0B21E2516100290F32 /* ASDNotificationModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ASDNotificationModel.h; sourceTree = "<group>"; };
@@ -543,6 +558,7 @@
 				0ABBD6992289C05E008DDE1A /* ASDTableViewDatasource.m */,
 				0ABBD69B2289C0C9008DDE1A /* ASDTableViewModel.h */,
 				0ABBD69C2289C0C9008DDE1A /* ASDTableViewModel.m */,
+				0ABC46CA22C3D5570029EEAC /* BtnTableviewCell */,
 			);
 			name = TableView;
 			sourceTree = "<group>";
@@ -724,6 +740,19 @@
 			name = YYKit;
 			sourceTree = "<group>";
 		};
+		0ABC46CA22C3D5570029EEAC /* BtnTableviewCell */ = {
+			isa = PBXGroup;
+			children = (
+				0ABC46CB22C3D5AA0029EEAC /* ASDClickBtnInCellViewController.h */,
+				0ABC46CC22C3D5AA0029EEAC /* ASDClickBtnInCellViewController.m */,
+				0ABC46C722C3D4910029EEAC /* ASDClickTableViewCell.h */,
+				0ABC46C822C3D4910029EEAC /* ASDClickTableViewCell.m */,
+				0ABC46CE22C3D7380029EEAC /* ASDInCellBtn.h */,
+				0ABC46CF22C3D7380029EEAC /* ASDInCellBtn.m */,
+			);
+			name = BtnTableviewCell;
+			sourceTree = "<group>";
+		};
 		0ACB6D6121E3B34D001B6E08 /* CALayer */ = {
 			isa = PBXGroup;
 			children = (
@@ -776,6 +805,10 @@
 				0AF3283421A1847400E25755 /* SubInitializer2.m */,
 				0A3DE82421A0783F0058F291 /* Initializer+Category.h */,
 				0A3DE82521A0783F0058F291 /* Initializer+Category.m */,
+				0A8F9AAC22C3831C0095A56E /* SubInitializer+Category.h */,
+				0A8F9AAB22C3831C0095A56E /* SubInitializer+Category.m */,
+				0A8F9AAE22C386200095A56E /* SubInitializer2+Category.h */,
+				0A8F9AAF22C386200095A56E /* SubInitializer2+Category.m */,
 			);
 			name = INIT;
 			sourceTree = "<group>";
@@ -1084,6 +1117,7 @@
 				0ACB6D6421E3B3DB001B6E08 /* ASDLayerController.m in Sources */,
 				0A3CFDB521CFD3D300E07AB6 /* User.m in Sources */,
 				0A14D2832292D39000ED8AEC /* ASDTabBarController.m in Sources */,
+				0A8F9AAD22C3831C0095A56E /* SubInitializer+Category.m in Sources */,
 				0ADA676A1FCD9AD300F72090 /* ExceptionHandler.m in Sources */,
 				0A9BF5AB1F274683008C5F70 /* ViewController.m in Sources */,
 				0A81088821356D1D004A886C /* Student.m in Sources */,
@@ -1096,6 +1130,7 @@
 				0AB28D33227B4E7D003DBB79 /* ASDFYYKitViewController.m in Sources */,
 				0AFB6D831F712096002B3544 /* MyWorkerClass.m in Sources */,
 				0A7F3761229AD4890010AFCB /* RACTableViewModel.m in Sources */,
+				0A8F9AB022C386200095A56E /* SubInitializer2+Category.m in Sources */,
 				0A2D3F9B2291826E006A2727 /* Bank.m in Sources */,
 				0AE158501F5089A900740EDE /* IvarTool.m in Sources */,
 				0A3B2E1521DFA93700C88476 /* ASDNotificationCenter.m in Sources */,
@@ -1139,6 +1174,7 @@
 				0AD7417D22919AB900970F87 /* XMLTool.m in Sources */,
 				0ABD9EAD1F274C1C00DF4D4C /* ViewControllerII.m in Sources */,
 				0AD56CA4227C74F8009ED0BF /* ASDFChatMessage.m in Sources */,
+				0ABC46CD22C3D5AA0029EEAC /* ASDClickBtnInCellViewController.m in Sources */,
 				0AE158561F515BCA00740EDE /* NSObject+JsonToModel.m in Sources */,
 				0AE158441F45C31400740EDE /* RuntimeTool.m in Sources */,
 				0A06EE6D21D52CD70004187B /* ASDFCollectionViewHorizonalFlowLayout.m in Sources */,
@@ -1150,6 +1186,8 @@
 				0AD56CA1227C6EAB009ED0BF /* ASDFYYDatasource.m in Sources */,
 				0AD7418022919FAA00970F87 /* Food.m in Sources */,
 				0A7FD498227C571A00A02EBB /* ASDYYLabelTableViewCell.m in Sources */,
+				0ABC46D022C3D7380029EEAC /* ASDInCellBtn.m in Sources */,
+				0ABC46C922C3D4910029EEAC /* ASDClickTableViewCell.m in Sources */,
 				0AC86E551FEEA6B000098A24 /* Initializer.m in Sources */,
 				0A9BF5A51F274683008C5F70 /* main.m in Sources */,
 				0A3DE82621A0783F0058F291 /* Initializer+Category.m in Sources */,

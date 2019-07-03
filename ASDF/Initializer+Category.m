@@ -11,10 +11,10 @@
 @implementation Initializer (Category)
 
 //+(void)load{
-//    NSLog(@"++++ category loaded~");
+//    NSLog(@"++++ super category loaded~");
 //}
 
 //+(void)initialize{
-//    NSLog(@"++++ category Initialized~");
+//    NSLog(@"++++ super category Initialized~");
 //}
 @end

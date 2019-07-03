@@ -99,6 +99,12 @@
                                     <action selector="onHandle3:" destination="BYZ-38-t0r" eventType="touchUpInside" id="azr-jf-3FO"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C4w-Ic-sdh">
+                                <rect key="frame" x="218.66666666666666" y="440" width="22" height="22"/>
+                                <connections>
+                                    <segue destination="z7e-xq-5yO" kind="show" id="ozf-m7-L7m"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.37521800249280457" blue="0.13518444235657212" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -107,8 +113,10 @@
                             <constraint firstItem="Wg6-ed-994" firstAttribute="top" secondItem="BM5-qq-axg" secondAttribute="bottom" constant="20" id="ArM-av-UWr"/>
                             <constraint firstItem="BM5-qq-axg" firstAttribute="centerY" secondItem="bzM-OX-mct" secondAttribute="centerY" id="Cwx-GK-QbG"/>
                             <constraint firstItem="mcA-yl-F2K" firstAttribute="centerY" secondItem="BM5-qq-axg" secondAttribute="centerY" id="NUy-0a-0ug"/>
+                            <constraint firstItem="C4w-Ic-sdh" firstAttribute="leading" secondItem="Wg6-ed-994" secondAttribute="trailing" constant="20" id="RMO-4l-SYj"/>
                             <constraint firstItem="Wg6-ed-994" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="d9m-Xq-o8J"/>
                             <constraint firstItem="bzM-OX-mct" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="eXC-KX-XzB"/>
+                            <constraint firstItem="C4w-Ic-sdh" firstAttribute="centerY" secondItem="Wg6-ed-994" secondAttribute="centerY" id="gdu-ez-Efs"/>
                             <constraint firstItem="BM5-qq-axg" firstAttribute="leading" secondItem="bzM-OX-mct" secondAttribute="trailing" constant="10" id="jIQ-EK-vJv"/>
                             <constraint firstItem="Xqy-kd-bhg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ns7-k2-q08"/>
                             <constraint firstItem="Xqy-kd-bhg" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="50" id="ry0-Ph-Xjq"/>
@@ -804,6 +812,59 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BOy-Cy-Wtr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="841" y="800"/>
+        </scene>
+        <!--Click Btn In Cell View Controller-->
+        <scene sceneID="1kP-Oj-oUK">
+            <objects>
+                <tableViewController id="z7e-xq-5yO" customClass="ASDClickBtnInCellViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="miY-ad-ZiU">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="44" id="5hg-iT-fHl" customClass="ASDClickTableViewCell">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="5hg-iT-fHl" id="VUh-d1-iIu">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.666666666666664"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1mT-Js-6V8">
+                                            <rect key="frame" x="36" y="11.333333333333336" width="11" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sp9-Xr-i9m" customClass="ASDInCellBtn">
+                                            <rect key="frame" x="317" y="11" width="22" height="22"/>
+                                            <connections>
+                                                <action selector="onClicked:" destination="5hg-iT-fHl" eventType="touchUpInside" id="ugP-Mr-zbX"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="1mT-Js-6V8" firstAttribute="centerY" secondItem="VUh-d1-iIu" secondAttribute="centerY" id="2su-mC-0kf"/>
+                                        <constraint firstItem="1mT-Js-6V8" firstAttribute="leading" secondItem="VUh-d1-iIu" secondAttribute="leadingMargin" constant="20" id="Gbb-RI-NIK"/>
+                                        <constraint firstItem="Sp9-Xr-i9m" firstAttribute="centerY" secondItem="VUh-d1-iIu" secondAttribute="centerY" id="T9t-K0-9w2"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="Sp9-Xr-i9m" secondAttribute="trailing" constant="20" id="VrK-21-PSM"/>
+                                        <constraint firstItem="Sp9-Xr-i9m" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="1mT-Js-6V8" secondAttribute="trailing" constant="20" id="j4u-QU-Dit"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="clickBtn" destination="Sp9-Xr-i9m" id="ukI-Ng-cUG"/>
+                                    <outlet property="title" destination="1mT-Js-6V8" id="tEs-Pr-y0r"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="z7e-xq-5yO" id="LC0-wD-yGY"/>
+                            <outlet property="delegate" destination="z7e-xq-5yO" id="4cS-lu-IHj"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="h8T-bu-Q4o" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2542" y="58"/>
         </scene>
         <!--Session Task View Controller-->
         <scene sceneID="VbO-67-nEZ">
