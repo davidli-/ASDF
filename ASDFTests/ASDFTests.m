@@ -7,6 +7,8 @@
 //
 
 #import <XCTest/XCTest.h>
+#import "Person.h"
+#import "RuntimeTool.h"
 
 @interface ASDFTests : XCTestCase
 
@@ -31,6 +33,9 @@
     // This is an example of a performance test case.
     [self measureBlock:^{
         // Put the code you want to measure the time of here.
+        NSArray *ivars = [RuntimeTool ivarListWithClass:[Person class]];
+        [RuntimeTool propertyListWithClass:[Person class]];
+        XCTAssertTrue(ivars.count > 0,@"!!!~~~~~");
     }];
 }
 

@@ -33,15 +33,27 @@
 - (void)testExample {
     // Use recording to get started writing UI tests.
     // Use XCTAssert and related functions to verify your tests produce the correct results.
+
+    /*
+    XCUIElement *button1 = [[XCUIApplication alloc] init].buttons[@"1111"];///获取名字为1111的按钮
+    XCTAssertTrue(button1.exists, @"'1111'按钮不存在");///#值为true才能通过，为false会停在这里
+    [button1 tap];///触发按钮的点击事件
+    */
     
-//    XCUIElement *button1 = [[XCUIApplication alloc] init].buttons[@"1111"];///获取名字为1111的按钮
-//    XCTAssertTrue(button1.exists, @"'1111'按钮不存在");///#值为true才能通过，为false会停在这里
-//    [button1 tap];///触发按钮的点击事件
+    //运行应用后 点击XCode左下角红色按钮自动录制
+
+    
+    XCUIApplication *app = [[XCUIApplication alloc] init];
+    [[[[[[[[[[[[app childrenMatchingType:XCUIElementTypeWindow] elementBoundByIndex:0] childrenMatchingType:XCUIElementTypeOther].element childrenMatchingType:XCUIElementTypeOther].element childrenMatchingType:XCUIElementTypeOther].element childrenMatchingType:XCUIElementTypeOther].element childrenMatchingType:XCUIElementTypeOther].element childrenMatchingType:XCUIElementTypeOther].element childrenMatchingType:XCUIElementTypeOther].element childrenMatchingType:XCUIElementTypeButton] elementBoundByIndex:3] tap];
+    [app.navigationBars[@"RACTableView"].buttons[@"\u8fd4\u56de"] tap];
+    [app.buttons[@"More Info"] tap];
+    [app.navigationBars[@"ASDClickBtnInCellView"].buttons[@"Back"] tap];
+    [app.buttons[@"\u6a21\u6001"] tap];
+    [app.navigationBars[@"ASDTableView"].buttons[@"\u8fd4\u56de"] tap];
 }
 
 - (void)testPerformance{
     [self measureBlock:^{
-        UIViewController *vc = [[UIViewController alloc] init];
     }];
 }
 @end
