@@ -32,7 +32,7 @@
 }
 
 - (void)dealloc{
-    NSLog(@"+++ASDTabBar dealloced~");
+    //NSLog(@"+++ASDTabBar dealloced~");
 }
 
 - (void)layoutSubviews{

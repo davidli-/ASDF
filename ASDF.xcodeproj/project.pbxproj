@@ -26,6 +26,7 @@
 		0A1EB87F218DFE89005B6B54 /* ASDFThread.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A1EB87E218DFE89005B6B54 /* ASDFThread.m */; };
 		0A2250EB21C9254700EAA29F /* MainThreadStuckedObserverTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A2250EA21C9254700EAA29F /* MainThreadStuckedObserverTool.m */; };
 		0A24DDAA219B0E6B0012B4B6 /* SubModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A24DDA9219B0E6B0012B4B6 /* SubModel.m */; };
+		0A2A66AA22F2CDC70001203B /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0A2A66A822F2CDC70001203B /* Model.xcdatamodeld */; };
 		0A2D299721E4EA520050188E /* ASDFDownloadController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A2D299621E4EA520050188E /* ASDFDownloadController.m */; };
 		0A2D299A21E4EF880050188E /* ASDFRestorationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A2D299921E4EF880050188E /* ASDFRestorationViewController.m */; };
 		0A2D3F9B2291826E006A2727 /* Bank.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A2D3F9A2291826E006A2727 /* Bank.m */; };
@@ -42,10 +43,12 @@
 		0A5A58AA213ABF0F001FBBE5 /* SwiftFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5A58A9213ABF0F001FBBE5 /* SwiftFile.swift */; };
 		0A5B36FA1F67F13A003268BB /* Timer-Runloop.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A5B36F91F67F13A003268BB /* Timer-Runloop.m */; };
 		0A5BB07021342E7600283890 /* UIViewInspectable.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A5BB06F21342E7600283890 /* UIViewInspectable.m */; };
+		0A61E3262301B7E400A939D8 /* CoreDataStack.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A61E3252301B7E400A939D8 /* CoreDataStack.m */; };
 		0A68206821A448E100687A8C /* Folder reference in Resources */ = {isa = PBXBuildFile; fileRef = 0A68206721A448E100687A8C /* Folder reference */; };
 		0A6D450D21CCE4EE00257A42 /* ASDFThreadHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A6D450C21CCE4EE00257A42 /* ASDFThreadHelper.m */; };
 		0A72E3F12289A86D00B8F13A /* ASDTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A72E3F02289A86D00B8F13A /* ASDTableViewCell.m */; };
 		0A72E3F42289AE7500B8F13A /* ASDTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A72E3F32289AE7500B8F13A /* ASDTableViewController.m */; };
+		0A744EAE22DA55370019BEA1 /* ASDLockTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A744EAD22DA55370019BEA1 /* ASDLockTool.m */; };
 		0A78A7E621ECC1B900A27718 /* People.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A78A7E521ECC1B900A27718 /* People.m */; };
 		0A7F3757229AD3B40010AFCB /* RACTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A7F3756229AD3B40010AFCB /* RACTableViewController.m */; };
 		0A7F375B229AD40E0010AFCB /* RACTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A7F375A229AD40E0010AFCB /* RACTableViewCell.m */; };
@@ -81,6 +84,9 @@
 		0ABC46C922C3D4910029EEAC /* ASDClickTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ABC46C822C3D4910029EEAC /* ASDClickTableViewCell.m */; };
 		0ABC46CD22C3D5AA0029EEAC /* ASDClickBtnInCellViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ABC46CC22C3D5AA0029EEAC /* ASDClickBtnInCellViewController.m */; };
 		0ABC46D022C3D7380029EEAC /* ASDInCellBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ABC46CF22C3D7380029EEAC /* ASDInCellBtn.m */; };
+		0ABCD98122F45473002C2551 /* PropertyValueTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ABCD98022F45473002C2551 /* PropertyValueTransformer.m */; };
+		0ABCD98522F48247002C2551 /* ASDFDataBaseHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ABCD98422F48247002C2551 /* ASDFDataBaseHelper.m */; };
+		0ABCD98822F484D0002C2551 /* ASDFCoreDataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ABCD98722F484D0002C2551 /* ASDFCoreDataViewController.m */; };
 		0ABD9EAD1F274C1C00DF4D4C /* ViewControllerII.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ABD9EAC1F274C1C00DF4D4C /* ViewControllerII.m */; };
 		0AC03A0D21E2516100290F32 /* ASDNotificationModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AC03A0C21E2516100290F32 /* ASDNotificationModel.m */; };
 		0AC3E82E21C3FAC90034CB2E /* AnimateClickedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AC3E82D21C3FAC90034CB2E /* AnimateClickedView.m */; };
@@ -88,6 +94,7 @@
 		0AC86E461FEC112E00098A24 /* DataTaskTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AC86E451FEC112E00098A24 /* DataTaskTool.m */; };
 		0AC86E4F1FED265800098A24 /* SessionTaskViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AC86E4E1FED265800098A24 /* SessionTaskViewController.m */; };
 		0AC86E551FEEA6B000098A24 /* Initializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AC86E541FEEA6B000098A24 /* Initializer.m */; };
+		0AC97BA622F9DC6400A544F9 /* CoreDataSourse.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AC97BA522F9DC6400A544F9 /* CoreDataSourse.m */; };
 		0ACB6D6421E3B3DB001B6E08 /* ASDLayerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ACB6D6321E3B3DB001B6E08 /* ASDLayerController.m */; };
 		0AD56CA1227C6EAB009ED0BF /* ASDFYYDatasource.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AD56CA0227C6EAB009ED0BF /* ASDFYYDatasource.m */; };
 		0AD56CA4227C74F8009ED0BF /* ASDFChatMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AD56CA3227C74F8009ED0BF /* ASDFChatMessage.m */; };
@@ -160,6 +167,7 @@
 		0A2250EA21C9254700EAA29F /* MainThreadStuckedObserverTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainThreadStuckedObserverTool.m; sourceTree = "<group>"; };
 		0A24DDA8219B0E6B0012B4B6 /* SubModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SubModel.h; sourceTree = "<group>"; };
 		0A24DDA9219B0E6B0012B4B6 /* SubModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SubModel.m; sourceTree = "<group>"; };
+		0A2A66A922F2CDC70001203B /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		0A2D299521E4EA520050188E /* ASDFDownloadController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ASDFDownloadController.h; sourceTree = "<group>"; };
 		0A2D299621E4EA520050188E /* ASDFDownloadController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ASDFDownloadController.m; sourceTree = "<group>"; };
 		0A2D299821E4EF880050188E /* ASDFRestorationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ASDFRestorationViewController.h; sourceTree = "<group>"; };
@@ -194,6 +202,8 @@
 		0A5B36F91F67F13A003268BB /* Timer-Runloop.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Timer-Runloop.m"; sourceTree = "<group>"; };
 		0A5BB06E21342E7600283890 /* UIViewInspectable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIViewInspectable.h; sourceTree = "<group>"; };
 		0A5BB06F21342E7600283890 /* UIViewInspectable.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UIViewInspectable.m; sourceTree = "<group>"; };
+		0A61E3242301B7E400A939D8 /* CoreDataStack.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoreDataStack.h; sourceTree = "<group>"; };
+		0A61E3252301B7E400A939D8 /* CoreDataStack.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoreDataStack.m; sourceTree = "<group>"; };
 		0A68206721A448E100687A8C /* Folder reference */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "Folder reference"; sourceTree = SOURCE_ROOT; };
 		0A6D450B21CCE4EE00257A42 /* ASDFThreadHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ASDFThreadHelper.h; sourceTree = "<group>"; };
 		0A6D450C21CCE4EE00257A42 /* ASDFThreadHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ASDFThreadHelper.m; sourceTree = "<group>"; };
@@ -201,8 +211,11 @@
 		0A72E3F02289A86D00B8F13A /* ASDTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ASDTableViewCell.m; sourceTree = "<group>"; };
 		0A72E3F22289AE7500B8F13A /* ASDTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ASDTableViewController.h; sourceTree = "<group>"; };
 		0A72E3F32289AE7500B8F13A /* ASDTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ASDTableViewController.m; sourceTree = "<group>"; };
+		0A744EAC22DA55370019BEA1 /* ASDLockTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ASDLockTool.h; sourceTree = "<group>"; };
+		0A744EAD22DA55370019BEA1 /* ASDLockTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ASDLockTool.m; sourceTree = "<group>"; };
 		0A78A7E421ECC1B900A27718 /* People.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = People.h; sourceTree = "<group>"; };
 		0A78A7E521ECC1B900A27718 /* People.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = People.m; sourceTree = "<group>"; };
+		0A7E69A72304672A004F2CD0 /* Model 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Model 2.xcdatamodel"; sourceTree = "<group>"; };
 		0A7F3755229AD3B40010AFCB /* RACTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RACTableViewController.h; sourceTree = "<group>"; };
 		0A7F3756229AD3B40010AFCB /* RACTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RACTableViewController.m; sourceTree = "<group>"; };
 		0A7F3759229AD40E0010AFCB /* RACTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RACTableViewCell.h; sourceTree = "<group>"; };
@@ -266,6 +279,12 @@
 		0ABC46CC22C3D5AA0029EEAC /* ASDClickBtnInCellViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ASDClickBtnInCellViewController.m; sourceTree = "<group>"; };
 		0ABC46CE22C3D7380029EEAC /* ASDInCellBtn.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ASDInCellBtn.h; sourceTree = "<group>"; };
 		0ABC46CF22C3D7380029EEAC /* ASDInCellBtn.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ASDInCellBtn.m; sourceTree = "<group>"; };
+		0ABCD97F22F45473002C2551 /* PropertyValueTransformer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PropertyValueTransformer.h; sourceTree = "<group>"; };
+		0ABCD98022F45473002C2551 /* PropertyValueTransformer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PropertyValueTransformer.m; sourceTree = "<group>"; };
+		0ABCD98322F48247002C2551 /* ASDFDataBaseHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ASDFDataBaseHelper.h; sourceTree = "<group>"; };
+		0ABCD98422F48247002C2551 /* ASDFDataBaseHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ASDFDataBaseHelper.m; sourceTree = "<group>"; };
+		0ABCD98622F484D0002C2551 /* ASDFCoreDataViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ASDFCoreDataViewController.h; sourceTree = "<group>"; };
+		0ABCD98722F484D0002C2551 /* ASDFCoreDataViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ASDFCoreDataViewController.m; sourceTree = "<group>"; };
 		0ABD9EAB1F274C1C00DF4D4C /* ViewControllerII.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewControllerII.h; sourceTree = "<group>"; };
 		0ABD9EAC1F274C1C00DF4D4C /* ViewControllerII.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewControllerII.m; sourceTree = "<group>"; };
 		0AC03A0B21E2516100290F32 /* ASDNotificationModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ASDNotificationModel.h; sourceTree = "<group>"; };
@@ -281,6 +300,8 @@
 		0AC86E531FEEA6B000098A24 /* Initializer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Initializer.h; sourceTree = "<group>"; };
 		0AC86E541FEEA6B000098A24 /* Initializer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Initializer.m; sourceTree = "<group>"; };
 		0AC86E7A1FF557BA00098A24 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		0AC97BA422F9DC6400A544F9 /* CoreDataSourse.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoreDataSourse.h; sourceTree = "<group>"; };
+		0AC97BA522F9DC6400A544F9 /* CoreDataSourse.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoreDataSourse.m; sourceTree = "<group>"; };
 		0ACB6D6221E3B3DB001B6E08 /* ASDLayerController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ASDLayerController.h; sourceTree = "<group>"; };
 		0ACB6D6321E3B3DB001B6E08 /* ASDLayerController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ASDLayerController.m; sourceTree = "<group>"; };
 		0AD56C9F227C6EAB009ED0BF /* ASDFYYDatasource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ASDFYYDatasource.h; sourceTree = "<group>"; };
@@ -385,6 +406,16 @@
 				0A14D28D2292DF0B00ED8AEC /* ASDTabBar.xib */,
 			);
 			name = TabBar;
+			sourceTree = "<group>";
+		};
+		0A2A66AB22F342770001203B /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				0AC97BA222F9DBF600A544F9 /* Controller */,
+				0AC97BA322F9DC0A00A544F9 /* Helper */,
+				0ABCD98222F481EB002C2551 /* Model */,
+			);
+			name = CoreData;
 			sourceTree = "<group>";
 		};
 		0A2D3F9C229190AC006A2727 /* Program */ = {
@@ -519,6 +550,7 @@
 			isa = PBXGroup;
 			children = (
 				0AB28D29227B487C003DBB79 /* Pics */,
+				0A2A66A822F2CDC70001203B /* Model.xcdatamodeld */,
 				0A9BF5AC1F274683008C5F70 /* Main.storyboard */,
 				0A9BF5B11F274683008C5F70 /* LaunchScreen.storyboard */,
 				0A7FD497227C571A00A02EBB /* ASDYYLabelTableViewCell.xib */,
@@ -561,6 +593,15 @@
 				0ABC46CA22C3D5570029EEAC /* BtnTableviewCell */,
 			);
 			name = TableView;
+			sourceTree = "<group>";
+		};
+		0A744EAB22DA550B0019BEA1 /* Lock */ = {
+			isa = PBXGroup;
+			children = (
+				0A744EAC22DA55370019BEA1 /* ASDLockTool.h */,
+				0A744EAD22DA55370019BEA1 /* ASDLockTool.m */,
+			);
+			name = Lock;
 			sourceTree = "<group>";
 		};
 		0A7F3758229AD3D60010AFCB /* TableView */ = {
@@ -753,6 +794,37 @@
 			name = BtnTableviewCell;
 			sourceTree = "<group>";
 		};
+		0ABCD98222F481EB002C2551 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0ABCD97F22F45473002C2551 /* PropertyValueTransformer.h */,
+				0ABCD98022F45473002C2551 /* PropertyValueTransformer.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		0AC97BA222F9DBF600A544F9 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				0ABCD98622F484D0002C2551 /* ASDFCoreDataViewController.h */,
+				0ABCD98722F484D0002C2551 /* ASDFCoreDataViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		0AC97BA322F9DC0A00A544F9 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				0AC97BA422F9DC6400A544F9 /* CoreDataSourse.h */,
+				0AC97BA522F9DC6400A544F9 /* CoreDataSourse.m */,
+				0ABCD98322F48247002C2551 /* ASDFDataBaseHelper.h */,
+				0ABCD98422F48247002C2551 /* ASDFDataBaseHelper.m */,
+				0A61E3242301B7E400A939D8 /* CoreDataStack.h */,
+				0A61E3252301B7E400A939D8 /* CoreDataStack.m */,
+			);
+			name = Helper;
+			sourceTree = "<group>";
+		};
 		0ACB6D6121E3B34D001B6E08 /* CALayer */ = {
 			isa = PBXGroup;
 			children = (
@@ -839,6 +911,8 @@
 				0ABD9EAC1F274C1C00DF4D4C /* ViewControllerII.m */,
 				0A2D299821E4EF880050188E /* ASDFRestorationViewController.h */,
 				0A2D299921E4EF880050188E /* ASDFRestorationViewController.m */,
+				0A2A66AB22F342770001203B /* CoreData */,
+				0A744EAB22DA550B0019BEA1 /* Lock */,
 				0ADC7C552295A2B5001BC1C6 /* RAC */,
 				0A14D2842292DBAE00ED8AEC /* TabBar */,
 				0AD74178229199B200970F87 /* XML */,
@@ -1127,6 +1201,7 @@
 				0ADE405321D2645100D6B092 /* ASDFCollectionViewController.m in Sources */,
 				0AC3E82E21C3FAC90034CB2E /* AnimateClickedView.m in Sources */,
 				0AF3283521A1847400E25755 /* SubInitializer2.m in Sources */,
+				0ABCD98822F484D0002C2551 /* ASDFCoreDataViewController.m in Sources */,
 				0AB28D33227B4E7D003DBB79 /* ASDFYYKitViewController.m in Sources */,
 				0AFB6D831F712096002B3544 /* MyWorkerClass.m in Sources */,
 				0A7F3761229AD4890010AFCB /* RACTableViewModel.m in Sources */,
@@ -1140,6 +1215,8 @@
 				0A01B90A1FBF0DAD00250B19 /* NetOperation.m in Sources */,
 				0A9EFA1821DE4158003287FB /* ASDFBlueView.m in Sources */,
 				0A72E3F12289A86D00B8F13A /* ASDTableViewCell.m in Sources */,
+				0A61E3262301B7E400A939D8 /* CoreDataStack.m in Sources */,
+				0AC97BA622F9DC6400A544F9 /* CoreDataSourse.m in Sources */,
 				0A88907B21C2BCEB00297D87 /* RunloopHelper.m in Sources */,
 				0A9BF5A81F274683008C5F70 /* AppDelegate.m in Sources */,
 				0A1EB87F218DFE89005B6B54 /* ASDFThread.m in Sources */,
@@ -1151,6 +1228,7 @@
 				0AC51A632199F38F005B3CBE /* Model.m in Sources */,
 				0AE1584D1F4DF04C00740EDE /* ForwardTool.m in Sources */,
 				0AE1585C1F56FAD400740EDE /* NSObject+Associate.m in Sources */,
+				0A744EAE22DA55370019BEA1 /* ASDLockTool.m in Sources */,
 				0A3DE82321A076BF0058F291 /* SubInitializer.m in Sources */,
 				0A5B36FA1F67F13A003268BB /* Timer-Runloop.m in Sources */,
 				0A3B2E1221DFA92800C88476 /* ASDNotification.m in Sources */,
@@ -1159,11 +1237,13 @@
 				0A8108822134328A004A886C /* UIView+XIB.m in Sources */,
 				0A14D28C2292DD6500ED8AEC /* ASDTabBar.m in Sources */,
 				0A9EFA1E21DE6C24003287FB /* ASDFSingleton.m in Sources */,
+				0ABCD98522F48247002C2551 /* ASDFDataBaseHelper.m in Sources */,
 				0A7F3757229AD3B40010AFCB /* RACTableViewController.m in Sources */,
 				0A7F3767229AD6330010AFCB /* RACNetworker.m in Sources */,
 				0A2D299A21E4EF880050188E /* ASDFRestorationViewController.m in Sources */,
 				0AD741832291B6B100970F87 /* XMLViewController.m in Sources */,
 				0A88907E21C2BE2F00297D87 /* RuntimeTest.m in Sources */,
+				0ABCD98122F45473002C2551 /* PropertyValueTransformer.m in Sources */,
 				0ADC7C582295A385001BC1C6 /* HelloRACController.m in Sources */,
 				0ADA67661FC9823200F72090 /* Person.m in Sources */,
 				0A5BB07021342E7600283890 /* UIViewInspectable.m in Sources */,
@@ -1183,6 +1263,7 @@
 				0A40BD7A2194757E00BD03A1 /* CustomView.m in Sources */,
 				0A24DDAA219B0E6B0012B4B6 /* SubModel.m in Sources */,
 				0ABBD69A2289C05E008DDE1A /* ASDTableViewDatasource.m in Sources */,
+				0A2A66AA22F2CDC70001203B /* Model.xcdatamodeld in Sources */,
 				0AD56CA1227C6EAB009ED0BF /* ASDFYYDatasource.m in Sources */,
 				0AD7418022919FAA00970F87 /* Food.m in Sources */,
 				0A7FD498227C571A00A02EBB /* ASDYYLabelTableViewCell.m in Sources */,
@@ -1461,7 +1542,7 @@
 			baseConfigurationReference = C9599C48C1DF14F69F8264CB /* Pods-ASDF.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				AppName = Hallo1;
+				AppName = ASDF;
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_ENTITLEMENTS = ASDF/ASDF.entitlements;
@@ -1470,7 +1551,7 @@
 				ENABLE_STRICT_OBJC_MSGSEND = NO;
 				GCC_PREFIX_HEADER = $PROJECT_DIR/ASDF/PrefixHeader.pch;
 				INFOPLIST_FILE = ASDF/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = David.ASDF;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1485,7 +1566,7 @@
 			baseConfigurationReference = B5BE5B0EC8A5F68DE920DF53 /* Pods-ASDF.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				AppName = Hallo3;
+				AppName = Hallo;
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_ENTITLEMENTS = ASDF/ASDF.entitlements;
@@ -1494,7 +1575,7 @@
 				ENABLE_STRICT_OBJC_MSGSEND = NO;
 				GCC_PREFIX_HEADER = $PROJECT_DIR/ASDF/PrefixHeader.pch;
 				INFOPLIST_FILE = ASDF/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = David.ASDF;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1552,7 +1633,7 @@
 			baseConfigurationReference = 35A899D13891BB12872D403C /* Pods-ASDF.inhouse.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				AppName = Hallo2;
+				AppName = InHouse;
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_ENTITLEMENTS = ASDF/ASDF.entitlements;
@@ -1561,7 +1642,7 @@
 				ENABLE_STRICT_OBJC_MSGSEND = NO;
 				GCC_PREFIX_HEADER = $PROJECT_DIR/ASDF/PrefixHeader.pch;
 				INFOPLIST_FILE = ASDF/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = David.ASDF;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1674,6 +1755,20 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		0A2A66A822F2CDC70001203B /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				0A7E69A72304672A004F2CD0 /* Model 2.xcdatamodel */,
+				0A2A66A922F2CDC70001203B /* Model.xcdatamodel */,
+			);
+			currentVersion = 0A7E69A72304672A004F2CD0 /* Model 2.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 0A9BF5981F274683008C5F70 /* Project object */;
 }

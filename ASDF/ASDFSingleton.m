@@ -19,14 +19,7 @@ static ASDFSingleton *mSingleton = nil;
 // 声明单例的方式1：
 + (instancetype)shareInstance
 {
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        //if (!mSingleton) {//不用这个判断也可以 因为dispatch_once只会执行一次
-            mSingleton = [[ASDFSingleton alloc] init];
-            mSingleton.str = @"This is a string";//在 block 内初始化属性
-        //}
-    });
-    return mSingleton;
+    return [[self alloc] init];
 }
 
 + (instancetype)allocWithZone:(struct _NSZone *)zone{

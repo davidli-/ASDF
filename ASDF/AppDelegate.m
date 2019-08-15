@@ -8,7 +8,7 @@
 
 #import "AppDelegate.h"
 #import <UserNotifications/UserNotifications.h>
-#import "ASDNotificationCenter.h"
+
 
 @interface AppDelegate()<UNUserNotificationCenterDelegate>
 
@@ -36,7 +36,8 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
     return YES;
 }
 
-- (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken
+- (void)application:(UIApplication *)application
+didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken
 {
     NSString *deviceString = [[deviceToken description] stringByTrimmingCharactersInSet:
                               [NSCharacterSet characterSetWithCharactersInString:@"<>"]];
@@ -45,13 +46,132 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
     NSLog(@"+++deviceToken:%@",deviceString);
 }
 
-- (void)application:(UIApplication *)application didFailToRegisterForRemoteNotificationsWithError:(NSError *)error
+- (void)application:(UIApplication *)application
+didFailToRegisterForRemoteNotificationsWithError:(NSError *)error
 {
     NSLog(@"[DeviceToken Error]:%@\n",error.description);
 }
 
-- (void)registNotification
+#pragma mark -通知代理
+
+//App处于前台接收通知时
+- (void)userNotificationCenter:(UNUserNotificationCenter *)center
+       willPresentNotification:(UNNotification *)notification
+         withCompletionHandler:(void (^)(UNNotificationPresentationOptions))completionHandler
 {
+    //收到推送的请求
+    UNNotificationRequest *request = notification.request;
+    //收到推送的内容
+    UNNotificationContent *content = request.content;
+    //收到用户的基本信息
+    NSDictionary *userInfo = content.userInfo;
+    //收到推送消息的角标
+    NSNumber *badge = content.badge;
+    //收到推送消息body
+    NSString *body = content.body;
+    //推送消息的声音
+    UNNotificationSound *sound = content.sound;
+    // 推送消息的副标题
+    NSString *subtitle = content.subtitle;
+    // 推送消息的标题
+    NSString *title = content.title;
+    
+    if([notification.request.trigger isKindOfClass:[UNPushNotificationTrigger class]]) {
+        NSLog(@"iOS10 收到远程通知:%@",userInfo);
+    }else {
+        // 判断为本地通知
+        NSLog(@"收到本地通知:{\n body:%@，\n title:%@,\n subtitle:%@, \n badge：%@，\n sound：%@，\n userInfo：%@}",body,title,subtitle,badge,sound,userInfo);
+    }
+    // 需要执行这个方法，选择是否提醒用户，有Badge、Sound、Alert三种类型可以设置
+    completionHandler(UNNotificationPresentationOptionBadge|
+                      UNNotificationPresentationOptionSound|
+                      UNNotificationPresentationOptionAlert);
+}
+
+//App通知的点击事件
+-(void)userNotificationCenter:(UNUserNotificationCenter *)center
+didReceiveNotificationResponse:(UNNotificationResponse *)response
+        withCompletionHandler:(void (^)(void))completionHandler
+{
+    //这个代理方法，只会是用户点击消息才会触发，如果使用户长按（3DTouch）、Action等并不会触发。
+    //收到推送的请求
+    UNNotificationRequest *request = response.notification.request;
+    //收到推送的内容
+    UNNotificationContent *content = request.content;
+    //收到用户的基本信息
+    NSDictionary *userInfo = content.userInfo;
+    //收到推送消息的角标
+    NSNumber *badge = content.badge;
+    //收到推送消息body
+    NSString *body = content.body;
+    //推送消息的声音
+    UNNotificationSound *sound = content.sound;
+    // 推送消息的副标题
+    NSString *subtitle = content.subtitle;
+    // 推送消息的标题
+    NSString *title = content.title;
+    
+    if([response.notification.request.trigger isKindOfClass:[UNPushNotificationTrigger class]]) {
+        NSLog(@"iOS10 收到远程通知:%@",userInfo);
+    }else {
+        // 判断为本地通知
+        NSLog(@"点击了到本地通知:{\n body:%@，\n title:%@,\n subtitle:%@, \n badge：%@，\n sound：%@，\n userInfo：%@}",body,title,subtitle,badge,sound,userInfo);
+    }
+    completionHandler(); // 系统要求执行这个方法
+}
+
+#pragma mark-保存/恢复应用状态
+-(BOOL)application:(UIApplication *)application
+shouldRestoreApplicationState:(NSCoder *)coder{
+    return NO;
+}
+
+-(BOOL)application:(UIApplication *)application
+shouldSaveApplicationState:(NSCoder *)coder{
+    return NO;
+}
+
+-(void)application:(UIApplication *)application
+willEncodeRestorableStateWithCoder:(NSCoder *)coder{
+    
+}
+
+-(void)application:(UIApplication *)application
+didDecodeRestorableStateWithCoder:(NSCoder *)coder{
+    [[UIApplication sharedApplication] extendStateRestoration];
+    
+    dispatch_queue_t globalQueue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+    dispatch_async(globalQueue, ^{
+        
+        // do any additional asynchronous initialization work here...
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            
+            // done asynchronously initializing, complete our state restoration
+            //
+            [[UIApplication sharedApplication] completeStateRestoration];
+        });
+    });
+    
+    // if you ever want to check for restore bundle version of user interface idiom, use this code:
+    //
+    //ask for the restoration version (used in case we have multiple versions of the app with varying UIs)
+    // String with value of info.plist's Bundle Version (app version) when state was last saved for the app
+    //
+    NSString *restoreBundleVersion = [coder decodeObjectForKey:UIApplicationStateRestorationBundleVersionKey];
+    NSLog(@"Restore bundle version = %@", restoreBundleVersion);
+    
+    // ask for the restoration idiom (used in case user ran used to run an iPhone version but now running on an iPad)
+    // NSNumber containing the UIUSerInterfaceIdiom enum value of the app that saved state
+    //
+    NSNumber *restoreUserInterfaceIdiom = [coder decodeObjectForKey:UIApplicationStateRestorationUserInterfaceIdiomKey];
+    NSLog(@"Restore User Interface Idiom = %ld", (long)restoreUserInterfaceIdiom.integerValue);
+}
+
+
+#pragma mark -BUSINESS
+
+- (void)registNotification {
     //iOS10之后
     UNUserNotificationCenter *center = [UNUserNotificationCenter currentNotificationCenter];
     center.delegate = self;
@@ -120,117 +240,5 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
     region.notifyOnExit = YES;
     [UNLocationNotificationTrigger triggerWithRegion:region repeats:YES];
  */
-}
-
-#pragma mark -UNNOTIFICATION DELEGATE
-
-//App处于前台接收通知时
-- (void)userNotificationCenter:(UNUserNotificationCenter *)center
-willPresentNotification:(UNNotification *)notification
-         withCompletionHandler:(void (^)(UNNotificationPresentationOptions))completionHandler
-{
-    //收到推送的请求
-    UNNotificationRequest *request = notification.request;
-    //收到推送的内容
-    UNNotificationContent *content = request.content;
-    //收到用户的基本信息
-    NSDictionary *userInfo = content.userInfo;
-    //收到推送消息的角标
-    NSNumber *badge = content.badge;
-    //收到推送消息body
-    NSString *body = content.body;
-    //推送消息的声音
-    UNNotificationSound *sound = content.sound;
-    // 推送消息的副标题
-    NSString *subtitle = content.subtitle;
-    // 推送消息的标题
-    NSString *title = content.title;
-    
-    if([notification.request.trigger isKindOfClass:[UNPushNotificationTrigger class]]) {
-        NSLog(@"iOS10 收到远程通知:%@",userInfo);
-    }else {
-        // 判断为本地通知
-        NSLog(@"收到本地通知:{\n body:%@，\n title:%@,\n subtitle:%@, \n badge：%@，\n sound：%@，\n userInfo：%@}",body,title,subtitle,badge,sound,userInfo);
-    }
-    // 需要执行这个方法，选择是否提醒用户，有Badge、Sound、Alert三种类型可以设置
-    completionHandler(UNNotificationPresentationOptionBadge|
-                      UNNotificationPresentationOptionSound|
-                      UNNotificationPresentationOptionAlert);
-}
-
-//App通知的点击事件
--(void)userNotificationCenter:(UNUserNotificationCenter *)center
-didReceiveNotificationResponse:(UNNotificationResponse *)response
-withCompletionHandler:(void (^)(void))completionHandler
-{
-    //这个代理方法，只会是用户点击消息才会触发，如果使用户长按（3DTouch）、Action等并不会触发。
-    //收到推送的请求
-    UNNotificationRequest *request = response.notification.request;
-    //收到推送的内容
-    UNNotificationContent *content = request.content;
-    //收到用户的基本信息
-    NSDictionary *userInfo = content.userInfo;
-    //收到推送消息的角标
-    NSNumber *badge = content.badge;
-    //收到推送消息body
-    NSString *body = content.body;
-    //推送消息的声音
-    UNNotificationSound *sound = content.sound;
-    // 推送消息的副标题
-    NSString *subtitle = content.subtitle;
-    // 推送消息的标题
-    NSString *title = content.title;
-    
-    if([response.notification.request.trigger isKindOfClass:[UNPushNotificationTrigger class]]) {
-        NSLog(@"iOS10 收到远程通知:%@",userInfo);
-    }else {
-        // 判断为本地通知
-        NSLog(@"点击了到本地通知:{\n body:%@，\n title:%@,\n subtitle:%@, \n badge：%@，\n sound：%@，\n userInfo：%@}",body,title,subtitle,badge,sound,userInfo);
-    }
-    completionHandler(); // 系统要求执行这个方法
-}
-
-#pragma mark-保存和恢复应用状态
--(BOOL)application:(UIApplication *)application shouldRestoreApplicationState:(NSCoder *)coder{
-    return NO;
-}
-
--(BOOL)application:(UIApplication *)application shouldSaveApplicationState:(NSCoder *)coder{
-    return NO;
-}
-
--(void)application:(UIApplication *)application willEncodeRestorableStateWithCoder:(NSCoder *)coder{
-    
-}
-
--(void)application:(UIApplication *)application didDecodeRestorableStateWithCoder:(NSCoder *)coder{
-    [[UIApplication sharedApplication] extendStateRestoration];
-    
-    dispatch_queue_t globalQueue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
-    dispatch_async(globalQueue, ^{
-        
-        // do any additional asynchronous initialization work here...
-        
-        dispatch_async(dispatch_get_main_queue(), ^{
-            
-            // done asynchronously initializing, complete our state restoration
-            //
-            [[UIApplication sharedApplication] completeStateRestoration];
-        });
-    });
-    
-    // if you ever want to check for restore bundle version of user interface idiom, use this code:
-    //
-    //ask for the restoration version (used in case we have multiple versions of the app with varying UIs)
-    // String with value of info.plist's Bundle Version (app version) when state was last saved for the app
-    //
-    NSString *restoreBundleVersion = [coder decodeObjectForKey:UIApplicationStateRestorationBundleVersionKey];
-    NSLog(@"Restore bundle version = %@", restoreBundleVersion);
-    
-    // ask for the restoration idiom (used in case user ran used to run an iPhone version but now running on an iPad)
-    // NSNumber containing the UIUSerInterfaceIdiom enum value of the app that saved state
-    //
-    NSNumber *restoreUserInterfaceIdiom = [coder decodeObjectForKey:UIApplicationStateRestorationUserInterfaceIdiomKey];
-    NSLog(@"Restore User Interface Idiom = %ld", (long)restoreUserInterfaceIdiom.integerValue);
 }
 @end
