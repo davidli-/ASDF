@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		0A01B90A1FBF0DAD00250B19 /* NetOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A01B9091FBF0DAD00250B19 /* NetOperation.m */; };
 		0A06EE6D21D52CD70004187B /* ASDFCollectionViewHorizonalFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A06EE6C21D52CD70004187B /* ASDFCollectionViewHorizonalFlowLayout.m */; };
+		0A09EC242312C4A700A7035E /* Target_ASDFDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A09EC232312C4A700A7035E /* Target_ASDFDetailViewController.m */; };
+		0A09EC282312CC9000A7035E /* Target_ASDFAvatorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A09EC272312CC9000A7035E /* Target_ASDFAvatorViewController.m */; };
+		0A09EC2B2312D93A00A7035E /* CTMediator+Detail.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A09EC2A2312D93A00A7035E /* CTMediator+Detail.m */; };
 		0A14D2672292C16400ED8AEC /* 1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A14D2652292C16300ED8AEC /* 1@2x.png */; };
 		0A14D2682292C16400ED8AEC /* 1@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A14D2662292C16400ED8AEC /* 1@3x.png */; };
 		0A14D26B2292C58000ED8AEC /* btn_home_p@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A14D2692292C58000ED8AEC /* btn_home_p@2x.png */; };
@@ -76,6 +79,11 @@
 		0A9EFA1821DE4158003287FB /* ASDFBlueView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A9EFA1721DE4158003287FB /* ASDFBlueView.m */; };
 		0A9EFA1B21DE418B003287FB /* ASDFResponsibleLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A9EFA1A21DE418B003287FB /* ASDFResponsibleLabel.m */; };
 		0A9EFA1E21DE6C24003287FB /* ASDFSingleton.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A9EFA1D21DE6C24003287FB /* ASDFSingleton.m */; };
+		0AA28072231042F1008492C8 /* ASDFMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AA28071231042F1008492C8 /* ASDFMeViewController.m */; };
+		0AA2807523104315008492C8 /* ASDFAvatorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AA2807423104315008492C8 /* ASDFAvatorViewController.m */; };
+		0AA280782310432D008492C8 /* ASDFDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AA280772310432D008492C8 /* ASDFDetailViewController.m */; };
+		0AA2807D23105106008492C8 /* BackButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AA2807C23105106008492C8 /* BackButton.m */; };
+		0AA2808423105971008492C8 /* CTMediator+Avator.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AA2808323105971008492C8 /* CTMediator+Avator.m */; };
 		0AB28D2D227B487C003DBB79 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AB28D2B227B487C003DBB79 /* logo.png */; };
 		0AB28D33227B4E7D003DBB79 /* ASDFYYKitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AB28D32227B4E7D003DBB79 /* ASDFYYKitViewController.m */; };
 		0ABBD69A2289C05E008DDE1A /* ASDTableViewDatasource.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ABBD6992289C05E008DDE1A /* ASDTableViewDatasource.m */; };
@@ -144,6 +152,13 @@
 		0A01B9091FBF0DAD00250B19 /* NetOperation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NetOperation.m; sourceTree = "<group>"; };
 		0A06EE6B21D52CD70004187B /* ASDFCollectionViewHorizonalFlowLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ASDFCollectionViewHorizonalFlowLayout.h; sourceTree = "<group>"; };
 		0A06EE6C21D52CD70004187B /* ASDFCollectionViewHorizonalFlowLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ASDFCollectionViewHorizonalFlowLayout.m; sourceTree = "<group>"; };
+		0A09EC222312C4A700A7035E /* Target_ASDFDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Target_ASDFDetailViewController.h; sourceTree = "<group>"; };
+		0A09EC232312C4A700A7035E /* Target_ASDFDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Target_ASDFDetailViewController.m; sourceTree = "<group>"; };
+		0A09EC252312CAB900A7035E /* ASDFKeyForCTMediatorParameters.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ASDFKeyForCTMediatorParameters.h; sourceTree = "<group>"; };
+		0A09EC262312CC9000A7035E /* Target_ASDFAvatorViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Target_ASDFAvatorViewController.h; sourceTree = "<group>"; };
+		0A09EC272312CC9000A7035E /* Target_ASDFAvatorViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Target_ASDFAvatorViewController.m; sourceTree = "<group>"; };
+		0A09EC292312D93A00A7035E /* CTMediator+Detail.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CTMediator+Detail.h"; sourceTree = "<group>"; };
+		0A09EC2A2312D93A00A7035E /* CTMediator+Detail.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "CTMediator+Detail.m"; sourceTree = "<group>"; };
 		0A14D2652292C16300ED8AEC /* 1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "1@2x.png"; sourceTree = "<group>"; };
 		0A14D2662292C16400ED8AEC /* 1@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "1@3x.png"; sourceTree = "<group>"; };
 		0A14D2692292C58000ED8AEC /* btn_home_p@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn_home_p@2x.png"; sourceTree = "<group>"; };
@@ -265,6 +280,16 @@
 		0A9EFA1A21DE418B003287FB /* ASDFResponsibleLabel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ASDFResponsibleLabel.m; sourceTree = "<group>"; };
 		0A9EFA1C21DE6C24003287FB /* ASDFSingleton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ASDFSingleton.h; sourceTree = "<group>"; };
 		0A9EFA1D21DE6C24003287FB /* ASDFSingleton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ASDFSingleton.m; sourceTree = "<group>"; };
+		0AA28070231042F1008492C8 /* ASDFMeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ASDFMeViewController.h; sourceTree = "<group>"; };
+		0AA28071231042F1008492C8 /* ASDFMeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ASDFMeViewController.m; sourceTree = "<group>"; };
+		0AA2807323104315008492C8 /* ASDFAvatorViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ASDFAvatorViewController.h; sourceTree = "<group>"; };
+		0AA2807423104315008492C8 /* ASDFAvatorViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ASDFAvatorViewController.m; sourceTree = "<group>"; };
+		0AA280762310432D008492C8 /* ASDFDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ASDFDetailViewController.h; sourceTree = "<group>"; };
+		0AA280772310432D008492C8 /* ASDFDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ASDFDetailViewController.m; sourceTree = "<group>"; };
+		0AA2807B23105106008492C8 /* BackButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BackButton.h; sourceTree = "<group>"; };
+		0AA2807C23105106008492C8 /* BackButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BackButton.m; sourceTree = "<group>"; };
+		0AA2808223105971008492C8 /* CTMediator+Avator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CTMediator+Avator.h"; sourceTree = "<group>"; };
+		0AA2808323105971008492C8 /* CTMediator+Avator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "CTMediator+Avator.m"; sourceTree = "<group>"; };
 		0AB28D2B227B487C003DBB79 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
 		0AB28D31227B4E7D003DBB79 /* ASDFYYKitViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ASDFYYKitViewController.h; sourceTree = "<group>"; };
 		0AB28D32227B4E7D003DBB79 /* ASDFYYKitViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ASDFYYKitViewController.m; sourceTree = "<group>"; };
@@ -550,10 +575,9 @@
 			isa = PBXGroup;
 			children = (
 				0AB28D29227B487C003DBB79 /* Pics */,
-				0A2A66A822F2CDC70001203B /* Model.xcdatamodeld */,
 				0A9BF5AC1F274683008C5F70 /* Main.storyboard */,
 				0A9BF5B11F274683008C5F70 /* LaunchScreen.storyboard */,
-				0A7FD497227C571A00A02EBB /* ASDYYLabelTableViewCell.xib */,
+				0A2A66A822F2CDC70001203B /* Model.xcdatamodeld */,
 				0A9BF5AF1F274683008C5F70 /* Assets.xcassets */,
 			);
 			name = Res;
@@ -650,6 +674,7 @@
 			children = (
 				0A7FD495227C571A00A02EBB /* ASDYYLabelTableViewCell.h */,
 				0A7FD496227C571A00A02EBB /* ASDYYLabelTableViewCell.m */,
+				0A7FD497227C571A00A02EBB /* ASDYYLabelTableViewCell.xib */,
 			);
 			name = Cell;
 			sourceTree = "<group>";
@@ -748,6 +773,69 @@
 				0A9EFA1A21DE418B003287FB /* ASDFResponsibleLabel.m */,
 			);
 			name = UIResponderChain;
+			sourceTree = "<group>";
+		};
+		0AA2806F2310410E008492C8 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				0A09EC252312CAB900A7035E /* ASDFKeyForCTMediatorParameters.h */,
+				0AA2807E23105830008492C8 /* Mediator */,
+				0AA2807F23105847008492C8 /* Me+Component */,
+				0AA2808023105861008492C8 /* Avator+Component */,
+				0AA2808123105877008492C8 /* Detail+Component */,
+			);
+			name = Components;
+			sourceTree = "<group>";
+		};
+		0AA2807A231050B2008492C8 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				0AA2807B23105106008492C8 /* BackButton.h */,
+				0AA2807C23105106008492C8 /* BackButton.m */,
+			);
+			name = UI;
+			sourceTree = "<group>";
+		};
+		0AA2807E23105830008492C8 /* Mediator */ = {
+			isa = PBXGroup;
+			children = (
+				0AA2808223105971008492C8 /* CTMediator+Avator.h */,
+				0AA2808323105971008492C8 /* CTMediator+Avator.m */,
+				0A09EC292312D93A00A7035E /* CTMediator+Detail.h */,
+				0A09EC2A2312D93A00A7035E /* CTMediator+Detail.m */,
+			);
+			name = Mediator;
+			sourceTree = "<group>";
+		};
+		0AA2807F23105847008492C8 /* Me+Component */ = {
+			isa = PBXGroup;
+			children = (
+				0AA28070231042F1008492C8 /* ASDFMeViewController.h */,
+				0AA28071231042F1008492C8 /* ASDFMeViewController.m */,
+			);
+			name = "Me+Component";
+			sourceTree = "<group>";
+		};
+		0AA2808023105861008492C8 /* Avator+Component */ = {
+			isa = PBXGroup;
+			children = (
+				0AA2807323104315008492C8 /* ASDFAvatorViewController.h */,
+				0AA2807423104315008492C8 /* ASDFAvatorViewController.m */,
+				0A09EC262312CC9000A7035E /* Target_ASDFAvatorViewController.h */,
+				0A09EC272312CC9000A7035E /* Target_ASDFAvatorViewController.m */,
+			);
+			name = "Avator+Component";
+			sourceTree = "<group>";
+		};
+		0AA2808123105877008492C8 /* Detail+Component */ = {
+			isa = PBXGroup;
+			children = (
+				0AA280762310432D008492C8 /* ASDFDetailViewController.h */,
+				0AA280772310432D008492C8 /* ASDFDetailViewController.m */,
+				0A09EC222312C4A700A7035E /* Target_ASDFDetailViewController.h */,
+				0A09EC232312C4A700A7035E /* Target_ASDFDetailViewController.m */,
+			);
+			name = "Detail+Component";
 			sourceTree = "<group>";
 		};
 		0AB28D29227B487C003DBB79 /* Pics */ = {
@@ -911,6 +999,7 @@
 				0ABD9EAC1F274C1C00DF4D4C /* ViewControllerII.m */,
 				0A2D299821E4EF880050188E /* ASDFRestorationViewController.h */,
 				0A2D299921E4EF880050188E /* ASDFRestorationViewController.m */,
+				0AA2806F2310410E008492C8 /* Components */,
 				0A2A66AB22F342770001203B /* CoreData */,
 				0A744EAB22DA550B0019BEA1 /* Lock */,
 				0ADC7C552295A2B5001BC1C6 /* RAC */,
@@ -929,6 +1018,7 @@
 				0A5BB0742134308200283890 /* Runtime */,
 				0A88907821C2BC5200297D87 /* Runloop */,
 				0A5BB0732134303C00283890 /* Operation */,
+				0AA2807A231050B2008492C8 /* UI */,
 				0A5BB0722134300900283890 /* Model */,
 				0A5BB07121342FD200283890 /* Category */,
 				0A5BB0762134310A00283890 /* Res */,
@@ -1148,6 +1238,7 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-ASDF/Pods-ASDF-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/CTMediator/CTMediator.framework",
 				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
 				"${BUILT_PRODUCTS_DIR}/ReactiveObjC/ReactiveObjC.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
@@ -1155,6 +1246,7 @@
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CTMediator.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveObjC.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
@@ -1227,10 +1319,14 @@
 				0A9EFA1B21DE418B003287FB /* ASDFResponsibleLabel.m in Sources */,
 				0AC51A632199F38F005B3CBE /* Model.m in Sources */,
 				0AE1584D1F4DF04C00740EDE /* ForwardTool.m in Sources */,
+				0AA2808423105971008492C8 /* CTMediator+Avator.m in Sources */,
+				0A09EC242312C4A700A7035E /* Target_ASDFDetailViewController.m in Sources */,
+				0AA2807523104315008492C8 /* ASDFAvatorViewController.m in Sources */,
 				0AE1585C1F56FAD400740EDE /* NSObject+Associate.m in Sources */,
 				0A744EAE22DA55370019BEA1 /* ASDLockTool.m in Sources */,
 				0A3DE82321A076BF0058F291 /* SubInitializer.m in Sources */,
 				0A5B36FA1F67F13A003268BB /* Timer-Runloop.m in Sources */,
+				0AA28072231042F1008492C8 /* ASDFMeViewController.m in Sources */,
 				0A3B2E1221DFA92800C88476 /* ASDNotification.m in Sources */,
 				0A853469219491FF002AF0D3 /* CustomShapeLayer.m in Sources */,
 				0A78A7E621ECC1B900A27718 /* People.m in Sources */,
@@ -1240,6 +1336,7 @@
 				0ABCD98522F48247002C2551 /* ASDFDataBaseHelper.m in Sources */,
 				0A7F3757229AD3B40010AFCB /* RACTableViewController.m in Sources */,
 				0A7F3767229AD6330010AFCB /* RACNetworker.m in Sources */,
+				0A09EC2B2312D93A00A7035E /* CTMediator+Detail.m in Sources */,
 				0A2D299A21E4EF880050188E /* ASDFRestorationViewController.m in Sources */,
 				0AD741832291B6B100970F87 /* XMLViewController.m in Sources */,
 				0A88907E21C2BE2F00297D87 /* RuntimeTest.m in Sources */,
@@ -1252,6 +1349,8 @@
 				0A2250EB21C9254700EAA29F /* MainThreadStuckedObserverTool.m in Sources */,
 				0AC86E461FEC112E00098A24 /* DataTaskTool.m in Sources */,
 				0AD7417D22919AB900970F87 /* XMLTool.m in Sources */,
+				0A09EC282312CC9000A7035E /* Target_ASDFAvatorViewController.m in Sources */,
+				0AA280782310432D008492C8 /* ASDFDetailViewController.m in Sources */,
 				0ABD9EAD1F274C1C00DF4D4C /* ViewControllerII.m in Sources */,
 				0AD56CA4227C74F8009ED0BF /* ASDFChatMessage.m in Sources */,
 				0ABC46CD22C3D5AA0029EEAC /* ASDClickBtnInCellViewController.m in Sources */,
@@ -1275,6 +1374,7 @@
 				0A5A58AA213ABF0F001FBBE5 /* SwiftFile.swift in Sources */,
 				0A8889D921D7BE530058FDD4 /* ASDFCollectionViewHorizontalBaseFlowLayout.m in Sources */,
 				0ABBD69D2289C0C9008DDE1A /* ASDTableViewModel.m in Sources */,
+				0AA2807D23105106008492C8 /* BackButton.m in Sources */,
 				0A1D32C921E6EDF8000EC855 /* Person+C.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -1,4 +1,5 @@
 PODS:
+  - CTMediator (25)
   - Masonry (1.1.0)
   - ReactiveObjC (3.1.0)
   - SDWebImage (4.4.3):
@@ -9,6 +10,7 @@ PODS:
   - YYKit/no-arc (1.0.9)
 
 DEPENDENCIES:
+  - CTMediator
   - Masonry
   - ReactiveObjC (~> 3.1.0)
   - SDWebImage (~> 4.4.1)
@@ -16,17 +18,19 @@ DEPENDENCIES:
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - CTMediator
     - Masonry
     - ReactiveObjC
     - SDWebImage
     - YYKit
 
 SPEC CHECKSUMS:
+  CTMediator: 830c1fc204b3a6abf2a059510c7380f56343da0f
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   ReactiveObjC: 2a38ea15335de4119d8b17caf1db1484f61db902
   SDWebImage: c5594f1a19c48d526d321e548902b56b479cd508
   YYKit: 7cda43304a8dc3696c449041e2cb3107b4e236e7
 
-PODFILE CHECKSUM: fc71d0306b8c618c1023625740a9fd0561c6a31e
+PODFILE CHECKSUM: 3aadb9f7e319ed0a40c7334d07cfcdcbb0a0fd23
 
 COCOAPODS: 1.5.3
