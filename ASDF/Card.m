@@ -7,7 +7,12 @@
 //
 
 #import "Card.h"
+#import <DaKit/DaSerialize.h>
+#import <DaKit/DaKakashi.h>
 
 @implementation Card
+
+DaSerialize()
+DaKakashi()
 
 @end

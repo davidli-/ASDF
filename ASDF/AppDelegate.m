@@ -8,7 +8,7 @@
 
 #import "AppDelegate.h"
 #import <UserNotifications/UserNotifications.h>
-
+#import "Card.h"
 
 @interface AppDelegate()<UNUserNotificationCenterDelegate>
 
@@ -32,6 +32,15 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 //        NSCache;
 //        NSURLCache;
 //        CAShapeLayer;
+    
+    Card *card = [[Card alloc] init];
+    card.cardNumber = 100;
+    card.money = 50000000;
+    
+    NSData *data = [NSKeyedArchiver archivedDataWithRootObject:card];
+    Card *card2 = [NSKeyedUnarchiver unarchiveObjectWithData:data];
+    
+    Card *card3 = [card2 copy];
     
     return YES;
 }

@@ -406,6 +406,42 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0A05BC62231429FE00D74D01 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				0AA2808223105971008492C8 /* CTMediator+Avator.h */,
+				0AA2808323105971008492C8 /* CTMediator+Avator.m */,
+			);
+			name = Category;
+			sourceTree = "<group>";
+		};
+		0A05BC6323142A1300D74D01 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				0A09EC292312D93A00A7035E /* CTMediator+Detail.h */,
+				0A09EC2A2312D93A00A7035E /* CTMediator+Detail.m */,
+			);
+			name = Category;
+			sourceTree = "<group>";
+		};
+		0A05BC6423142A1B00D74D01 /* Target */ = {
+			isa = PBXGroup;
+			children = (
+				0A09EC262312CC9000A7035E /* Target_ASDFAvatorViewController.h */,
+				0A09EC272312CC9000A7035E /* Target_ASDFAvatorViewController.m */,
+			);
+			name = Target;
+			sourceTree = "<group>";
+		};
+		0A05BC6523142A2E00D74D01 /* Target */ = {
+			isa = PBXGroup;
+			children = (
+				0A09EC222312C4A700A7035E /* Target_ASDFDetailViewController.h */,
+				0A09EC232312C4A700A7035E /* Target_ASDFDetailViewController.m */,
+			);
+			name = Target;
+			sourceTree = "<group>";
+		};
 		0A06EE6E21D52D970004187B /* FlowLayout */ = {
 			isa = PBXGroup;
 			children = (
@@ -779,7 +815,6 @@
 			isa = PBXGroup;
 			children = (
 				0A09EC252312CAB900A7035E /* ASDFKeyForCTMediatorParameters.h */,
-				0AA2807E23105830008492C8 /* Mediator */,
 				0AA2807F23105847008492C8 /* Me+Component */,
 				0AA2808023105861008492C8 /* Avator+Component */,
 				0AA2808123105877008492C8 /* Detail+Component */,
@@ -796,17 +831,6 @@
 			name = UI;
 			sourceTree = "<group>";
 		};
-		0AA2807E23105830008492C8 /* Mediator */ = {
-			isa = PBXGroup;
-			children = (
-				0AA2808223105971008492C8 /* CTMediator+Avator.h */,
-				0AA2808323105971008492C8 /* CTMediator+Avator.m */,
-				0A09EC292312D93A00A7035E /* CTMediator+Detail.h */,
-				0A09EC2A2312D93A00A7035E /* CTMediator+Detail.m */,
-			);
-			name = Mediator;
-			sourceTree = "<group>";
-		};
 		0AA2807F23105847008492C8 /* Me+Component */ = {
 			isa = PBXGroup;
 			children = (
@@ -821,8 +845,8 @@
 			children = (
 				0AA2807323104315008492C8 /* ASDFAvatorViewController.h */,
 				0AA2807423104315008492C8 /* ASDFAvatorViewController.m */,
-				0A09EC262312CC9000A7035E /* Target_ASDFAvatorViewController.h */,
-				0A09EC272312CC9000A7035E /* Target_ASDFAvatorViewController.m */,
+				0A05BC62231429FE00D74D01 /* Category */,
+				0A05BC6423142A1B00D74D01 /* Target */,
 			);
 			name = "Avator+Component";
 			sourceTree = "<group>";
@@ -832,8 +856,8 @@
 			children = (
 				0AA280762310432D008492C8 /* ASDFDetailViewController.h */,
 				0AA280772310432D008492C8 /* ASDFDetailViewController.m */,
-				0A09EC222312C4A700A7035E /* Target_ASDFDetailViewController.h */,
-				0A09EC232312C4A700A7035E /* Target_ASDFDetailViewController.m */,
+				0A05BC6323142A1300D74D01 /* Category */,
+				0A05BC6523142A2E00D74D01 /* Target */,
 			);
 			name = "Detail+Component";
 			sourceTree = "<group>";
@@ -1237,8 +1261,9 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-ASDF/Pods-ASDF-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-ASDF/Pods-ASDF-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/CTMediator/CTMediator.framework",
+				"${BUILT_PRODUCTS_DIR}/DaKit/DaKit.framework",
 				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
 				"${BUILT_PRODUCTS_DIR}/ReactiveObjC/ReactiveObjC.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
@@ -1247,6 +1272,7 @@
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CTMediator.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DaKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveObjC.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
@@ -1254,7 +1280,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ASDF/Pods-ASDF-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ASDF/Pods-ASDF-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -1649,7 +1675,7 @@
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = D7FS892R5K;
 				ENABLE_STRICT_OBJC_MSGSEND = NO;
-				GCC_PREFIX_HEADER = $PROJECT_DIR/ASDF/PrefixHeader.pch;
+				GCC_PREFIX_HEADER = "$PROJECT_DIR/ASDF/PrefixHeader.pch";
 				INFOPLIST_FILE = ASDF/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1673,7 +1699,7 @@
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = D7FS892R5K;
 				ENABLE_STRICT_OBJC_MSGSEND = NO;
-				GCC_PREFIX_HEADER = $PROJECT_DIR/ASDF/PrefixHeader.pch;
+				GCC_PREFIX_HEADER = "$PROJECT_DIR/ASDF/PrefixHeader.pch";
 				INFOPLIST_FILE = ASDF/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1740,7 +1766,7 @@
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = D7FS892R5K;
 				ENABLE_STRICT_OBJC_MSGSEND = NO;
-				GCC_PREFIX_HEADER = $PROJECT_DIR/ASDF/PrefixHeader.pch;
+				GCC_PREFIX_HEADER = "$PROJECT_DIR/ASDF/PrefixHeader.pch";
 				INFOPLIST_FILE = ASDF/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

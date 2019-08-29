@@ -11,7 +11,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface Target_ASDFAvatorViewController : UIViewController
+@interface Target_ASDFAvatorViewController : NSObject
 
 - (ASDFAvatorViewController*)Action_showAvator:(NSDictionary*)param;
 

@@ -11,7 +11,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface Target_ASDFDetailViewController : UIViewController
+@interface Target_ASDFDetailViewController : NSObject
 
 - (ASDFDetailViewController*)Action_showDetail:(NSDictionary*)param;
 

@@ -15,10 +15,6 @@
 
 @implementation Target_ASDFAvatorViewController
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-}
-
 - (ASDFAvatorViewController*)Action_showAvator:(NSDictionary*)param
 {
     UIImage *image = param[kImage];

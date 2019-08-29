@@ -15,10 +15,6 @@
 
 @implementation Target_ASDFDetailViewController
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-}
-
 - (ASDFDetailViewController*)Action_showDetail:(NSDictionary*)param
 {
     ASDFDetailViewController *vc = [[UIStoryboard storyboardWithName:@"Main" bundle:nil]

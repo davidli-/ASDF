@@ -1,5 +1,6 @@
 PODS:
   - CTMediator (25)
+  - DaKit (0.1.1)
   - Masonry (1.1.0)
   - ReactiveObjC (3.1.0)
   - SDWebImage (4.4.3):
@@ -11,6 +12,7 @@ PODS:
 
 DEPENDENCIES:
   - CTMediator
+  - DaKit
   - Masonry
   - ReactiveObjC (~> 3.1.0)
   - SDWebImage (~> 4.4.1)
@@ -23,14 +25,17 @@ SPEC REPOS:
     - ReactiveObjC
     - SDWebImage
     - YYKit
+  https://github.com/davidli-/davidlii.git:
+    - DaKit
 
 SPEC CHECKSUMS:
   CTMediator: 830c1fc204b3a6abf2a059510c7380f56343da0f
+  DaKit: c43cda31375364d59592b3df7b148a7661f46c43
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   ReactiveObjC: 2a38ea15335de4119d8b17caf1db1484f61db902
   SDWebImage: c5594f1a19c48d526d321e548902b56b479cd508
   YYKit: 7cda43304a8dc3696c449041e2cb3107b4e236e7
 
-PODFILE CHECKSUM: 3aadb9f7e319ed0a40c7334d07cfcdcbb0a0fd23
+PODFILE CHECKSUM: 059559c64b10ba1d1dda8ecb6d96a4f91a90efcd
 
-COCOAPODS: 1.5.3
+COCOAPODS: 1.7.5
