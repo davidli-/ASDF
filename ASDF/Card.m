@@ -12,7 +12,7 @@
 
 @implementation Card
 
-DaSerialize()
-DaKakashi()
+DaSerialize() //serialize
+DaKakashi()   //copy
 
 @end
