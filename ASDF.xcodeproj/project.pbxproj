@@ -33,6 +33,9 @@
 		0A2D299721E4EA520050188E /* ASDFDownloadController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A2D299621E4EA520050188E /* ASDFDownloadController.m */; };
 		0A2D299A21E4EF880050188E /* ASDFRestorationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A2D299921E4EF880050188E /* ASDFRestorationViewController.m */; };
 		0A2D3F9B2291826E006A2727 /* Bank.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A2D3F9A2291826E006A2727 /* Bank.m */; };
+		0A37D3AD232C896000C0F7FC /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ADA67651FC9823200F72090 /* Person.m */; };
+		0A37D3AE232C897400C0F7FC /* RuntimeTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AE158431F45C31400740EDE /* RuntimeTool.m */; };
+		0A37D3B1232C8A9800C0F7FC /* SubInitializer+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A37D3B0232C8A9800C0F7FC /* SubInitializer+Category.m */; };
 		0A3B2E1221DFA92800C88476 /* ASDNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A3B2E1121DFA92800C88476 /* ASDNotification.m */; };
 		0A3B2E1521DFA93700C88476 /* ASDNotificationCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A3B2E1421DFA93700C88476 /* ASDNotificationCenter.m */; };
 		0A3B47B821A83F5800EED7A7 /* ASDFTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A3B47B721A83F5800EED7A7 /* ASDFTests.m */; };
@@ -68,7 +71,6 @@
 		0A8889D921D7BE530058FDD4 /* ASDFCollectionViewHorizontalBaseFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A8889D821D7BE530058FDD4 /* ASDFCollectionViewHorizontalBaseFlowLayout.m */; };
 		0A88907B21C2BCEB00297D87 /* RunloopHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A88907A21C2BCEB00297D87 /* RunloopHelper.m */; };
 		0A88907E21C2BE2F00297D87 /* RuntimeTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A88907D21C2BE2F00297D87 /* RuntimeTest.m */; };
-		0A8F9AAD22C3831C0095A56E /* SubInitializer+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A8F9AAB22C3831C0095A56E /* SubInitializer+Category.m */; };
 		0A8F9AB022C386200095A56E /* SubInitializer2+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A8F9AAF22C386200095A56E /* SubInitializer2+Category.m */; };
 		0A9BF5A51F274683008C5F70 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A9BF5A41F274683008C5F70 /* main.m */; };
 		0A9BF5A81F274683008C5F70 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A9BF5A71F274683008C5F70 /* AppDelegate.m */; };
@@ -124,7 +126,6 @@
 		0AE158501F5089A900740EDE /* IvarTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AE1584F1F5089A900740EDE /* IvarTool.m */; };
 		0AE158561F515BCA00740EDE /* NSObject+JsonToModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AE158551F515BCA00740EDE /* NSObject+JsonToModel.m */; };
 		0AE1585C1F56FAD400740EDE /* NSObject+Associate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AE1585B1F56FAD400740EDE /* NSObject+Associate.m */; };
-		0AEDFEBC214623DD006B318F /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AEDFEBB214623DD006B318F /* HealthKit.framework */; };
 		0AF3283521A1847400E25755 /* SubInitializer2.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AF3283421A1847400E25755 /* SubInitializer2.m */; };
 		0AFB6D831F712096002B3544 /* MyWorkerClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AFB6D821F712096002B3544 /* MyWorkerClass.m */; };
 		B843D418BD690479B1C28ECF /* Pods_ASDF.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 412E5B44540CD175780FF3E2 /* Pods_ASDF.framework */; };
@@ -189,6 +190,8 @@
 		0A2D299921E4EF880050188E /* ASDFRestorationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ASDFRestorationViewController.m; sourceTree = "<group>"; };
 		0A2D3F992291826E006A2727 /* Bank.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Bank.h; sourceTree = "<group>"; };
 		0A2D3F9A2291826E006A2727 /* Bank.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Bank.m; sourceTree = "<group>"; };
+		0A37D3AF232C8A9800C0F7FC /* SubInitializer+Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SubInitializer+Category.h"; sourceTree = "<group>"; };
+		0A37D3B0232C8A9800C0F7FC /* SubInitializer+Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SubInitializer+Category.m"; sourceTree = "<group>"; };
 		0A3B2E1021DFA92800C88476 /* ASDNotification.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ASDNotification.h; sourceTree = "<group>"; };
 		0A3B2E1121DFA92800C88476 /* ASDNotification.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ASDNotification.m; sourceTree = "<group>"; };
 		0A3B2E1321DFA93700C88476 /* ASDNotificationCenter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ASDNotificationCenter.h; sourceTree = "<group>"; };
@@ -260,8 +263,6 @@
 		0A88907A21C2BCEB00297D87 /* RunloopHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RunloopHelper.m; sourceTree = "<group>"; };
 		0A88907C21C2BE2F00297D87 /* RuntimeTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RuntimeTest.h; sourceTree = "<group>"; };
 		0A88907D21C2BE2F00297D87 /* RuntimeTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RuntimeTest.m; sourceTree = "<group>"; };
-		0A8F9AAB22C3831C0095A56E /* SubInitializer+Category.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "SubInitializer+Category.m"; path = "/Users/Macmafia/Desktop/工程/ASDF/ASDF/SubInitializer+Category.m"; sourceTree = "<absolute>"; };
-		0A8F9AAC22C3831C0095A56E /* SubInitializer+Category.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "SubInitializer+Category.h"; path = "/Users/Macmafia/Desktop/工程/ASDF/ASDF/SubInitializer+Category.h"; sourceTree = "<absolute>"; };
 		0A8F9AAE22C386200095A56E /* SubInitializer2+Category.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SubInitializer2+Category.h"; sourceTree = "<group>"; };
 		0A8F9AAF22C386200095A56E /* SubInitializer2+Category.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "SubInitializer2+Category.m"; sourceTree = "<group>"; };
 		0A9BF5A01F274683008C5F70 /* ASDF.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ASDF.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -398,7 +399,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0AEDFEBC214623DD006B318F /* HealthKit.framework in Frameworks */,
 				B843D418BD690479B1C28ECF /* Pods_ASDF.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -989,8 +989,8 @@
 				0AF3283421A1847400E25755 /* SubInitializer2.m */,
 				0A3DE82421A0783F0058F291 /* Initializer+Category.h */,
 				0A3DE82521A0783F0058F291 /* Initializer+Category.m */,
-				0A8F9AAC22C3831C0095A56E /* SubInitializer+Category.h */,
-				0A8F9AAB22C3831C0095A56E /* SubInitializer+Category.m */,
+				0A37D3AF232C8A9800C0F7FC /* SubInitializer+Category.h */,
+				0A37D3B0232C8A9800C0F7FC /* SubInitializer+Category.m */,
 				0A8F9AAE22C386200095A56E /* SubInitializer2+Category.h */,
 				0A8F9AAF22C386200095A56E /* SubInitializer2+Category.m */,
 			);
@@ -1290,6 +1290,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A37D3AD232C896000C0F7FC /* Person.m in Sources */,
+				0A37D3AE232C897400C0F7FC /* RuntimeTool.m in Sources */,
 				0A3B47B821A83F5800EED7A7 /* ASDFTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1309,7 +1311,7 @@
 				0ACB6D6421E3B3DB001B6E08 /* ASDLayerController.m in Sources */,
 				0A3CFDB521CFD3D300E07AB6 /* User.m in Sources */,
 				0A14D2832292D39000ED8AEC /* ASDTabBarController.m in Sources */,
-				0A8F9AAD22C3831C0095A56E /* SubInitializer+Category.m in Sources */,
+				0A37D3B1232C8A9800C0F7FC /* SubInitializer+Category.m in Sources */,
 				0ADA676A1FCD9AD300F72090 /* ExceptionHandler.m in Sources */,
 				0A9BF5AB1F274683008C5F70 /* ViewController.m in Sources */,
 				0A81088821356D1D004A886C /* Student.m in Sources */,
@@ -1469,6 +1471,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
+				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/ASDF\"";
 				INFOPLIST_FILE = ASDFTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -1501,6 +1504,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
+				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/ASDF\"";
 				INFOPLIST_FILE = ASDFTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -1675,7 +1679,7 @@
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = D7FS892R5K;
 				ENABLE_STRICT_OBJC_MSGSEND = NO;
-				GCC_PREFIX_HEADER = "$PROJECT_DIR/ASDF/PrefixHeader.pch";
+				GCC_PREFIX_HEADER = $PROJECT_DIR/ASDF/PrefixHeader.pch;
 				INFOPLIST_FILE = ASDF/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1699,7 +1703,7 @@
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = D7FS892R5K;
 				ENABLE_STRICT_OBJC_MSGSEND = NO;
-				GCC_PREFIX_HEADER = "$PROJECT_DIR/ASDF/PrefixHeader.pch";
+				GCC_PREFIX_HEADER = $PROJECT_DIR/ASDF/PrefixHeader.pch;
 				INFOPLIST_FILE = ASDF/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1766,7 +1770,7 @@
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = D7FS892R5K;
 				ENABLE_STRICT_OBJC_MSGSEND = NO;
-				GCC_PREFIX_HEADER = "$PROJECT_DIR/ASDF/PrefixHeader.pch";
+				GCC_PREFIX_HEADER = $PROJECT_DIR/ASDF/PrefixHeader.pch;
 				INFOPLIST_FILE = ASDF/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1797,6 +1801,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
+				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/ASDF\"";
 				INFOPLIST_FILE = ASDFTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";

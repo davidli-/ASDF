@@ -8,8 +8,6 @@
 
 #import "AppDelegate.h"
 #import <UserNotifications/UserNotifications.h>
-#import "Card.h"
-#import <DaKit/DaClassInfo.h>
 
 @interface AppDelegate()<UNUserNotificationCenterDelegate>
 
@@ -34,24 +32,8 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 //        NSURLCache;
 //        CAShapeLayer;
     
-    [self example];
     
     return YES;
-}
-
-- (void)example{
-    Card *card = [[Card alloc] init];
-    card.cardNumber = 100;
-    card.money = 50000000;
-    
-    NSData *data = [NSKeyedArchiver archivedDataWithRootObject:card];
-    Card *card2 = [NSKeyedUnarchiver unarchiveObjectWithData:data];
-    
-    Card *card3 = [card2 copy];
-    
-    NSArray *ivars = [DaClassInfo ivarListWithClass:[Card class]];
-    NSArray *props = [DaClassInfo propertyListWithClass:[Card class]];
-    NSArray *meths = [DaClassInfo methodListWithClass:[Card class]];
 }
 
 - (void)application:(UIApplication *)application
