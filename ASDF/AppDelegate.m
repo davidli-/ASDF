@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import <UserNotifications/UserNotifications.h>
+#import "MattASXViewController.h"
 
 @interface AppDelegate()<UNUserNotificationCenterDelegate>
 
@@ -32,6 +33,11 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 //        NSURLCache;
 //        CAShapeLayer;
     
+    MattASXViewController *vc = [[MattASXViewController alloc] init];
+    ASNavigationController *navicontroller = [[ASNavigationController alloc] initWithRootViewController:vc];
+    navicontroller.navigationBar.translucent = NO;
+    self.window.rootViewController = navicontroller;
+    [self.window makeKeyAndVisible];
     
     return YES;
 }
