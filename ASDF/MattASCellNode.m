@@ -30,6 +30,7 @@
         _titleNode.attributedText = [[NSAttributedString alloc] initWithString:[NSString stringWithFormat:@"Index:%ld",indexPath.row]
                                                                   attributes:@{NSForegroundColorAttributeName: [UIColor blackColor],
                                                                                NSFontAttributeName: [UIFont systemFontOfSize:15]}];
+        [_titleNode addTarget:self action:@selector(onClickTitle:) forControlEvents:ASControlNodeEventTouchUpInside];
         
         // 详情
         _detailNode = [[ASTextNode alloc] init];
@@ -67,5 +68,12 @@
     ASInsetLayoutSpec *insetSpec = [ASInsetLayoutSpec insetLayoutSpecWithInsets:UIEdgeInsetsMake(10, 20, 10, 20) child:contentStackSpec];
 
     return insetSpec;
+}
+
+// MARK: -Target-Actions
+
+- (void)onClickTitle:(id)sender {
+    ASTextNode *titleNode = sender;
+    NSLog(@"+++onClickTitle:%@",titleNode.attributedText.string);
 }
 @end
