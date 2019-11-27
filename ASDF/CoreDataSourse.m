@@ -9,6 +9,7 @@
 #import "CoreDataSourse.h"
 #import <UIKit/UIKit.h>
 #import "ASDFDataBaseHelper.h"
+#import "CoreDataStack.h"
 #import "Student.h"
 
 #define kLimiteSize 2;
@@ -16,6 +17,8 @@
 @interface CoreDataSourse ()
 @property (nonatomic, strong) NSMutableArray *mDatasourceArr;
 @property (nonatomic, strong) NSManagedObjectContext *viewContext;
+// YES时使用iOS10之后新出的NSPersistentContainer管理coredata堆栈，否则使用我自己的CoreDataStack类手动管理
+@property (nonatomic, assign) BOOL useNewCoreDataStack; 
 @end
 
 @implementation CoreDataSourse
@@ -24,6 +27,7 @@
 {
     self = [super init];
     if (self) {
+        _useNewCoreDataStack = YES;
         [self fetchAllDatas];
     }
     return self;
@@ -31,7 +35,14 @@
 
 - (NSManagedObjectContext *)viewContext{
     if (!_viewContext) {
-        _viewContext = [ASDFDataBaseHelper shareInstance].persistentContainer.viewContext;
+        if (_useNewCoreDataStack) {
+            //使用iOS10之后的NSPersistentContainer
+            // NSPersistentContainer提供的MOC默认是NSMainQueueConcurrencyType类型的
+            _viewContext = [ASDFDataBaseHelper shareInstance].persistentContainer.viewContext;
+        }else{
+            // 使用老版本 自己写CoreData堆栈
+            _viewContext = [CoreDataStack shareInstance].managedObjectContext;
+        }
     }
     return _viewContext;
 }
@@ -98,7 +109,7 @@
     c.teachers = [NSSet setWithObject:t]; // 1->N，直接设置course对应的关系“teachers”字段
     c.students = [NSSet setWithObjects:s1, s2, nil]; // 数组，transformable类型，数组中的元素student需要实现NSCoding协议
     
-    [[ASDFDataBaseHelper shareInstance] saveContext];
+    [self save];
     
     // 2.从内存数据源中删除
     [self.mDatasourceArr addObject:c];
@@ -132,7 +143,7 @@
     for (Course *c in fetchedObjects) {
         [self.viewContext deleteObject:c];
     }
-    [[ASDFDataBaseHelper shareInstance] saveContext];
+    [self save];
     
     // 2.从内存数据源中删除
     [self.mDatasourceArr removeObjectAtIndex:index];
@@ -161,7 +172,7 @@
         Course *c = matchArr[i];
         c.name = [c.name stringByAppendingString:@"X"]; //managed object对象，更新到内存中
     }
-    [[ASDFDataBaseHelper shareInstance] saveContext]; // 同步到数据库
+    [self save]; // 同步到数据库
     
     if ([_delegate respondsToSelector:@selector(dataSourcesDidUpdateDataAtIndex:)]) {
         [_delegate dataSourcesDidUpdateDataAtIndex:index]; //刷新UI，cell使用的model指向的就是内存中这个已更新的managed object对象，所以可以直接重新取值
@@ -216,7 +227,8 @@
 - (void)fetchWithRequestInDatamodeldFile{
     
     // 使用.xcdatamodeld中预先定义好的NSFetchRequest
-    NSManagedObjectModel *model = [ASDFDataBaseHelper shareInstance].persistentContainer.managedObjectModel;
+//    NSManagedObjectModel *model = [ASDFDataBaseHelper shareInstance].persistentContainer.managedObjectModel;
+    NSManagedObjectModel *model = [CoreDataStack shareInstance].managedObjectModel;
     NSFetchRequest *request = [model fetchRequestTemplateForName:@"Fetch1"];
     NSError *error;
     NSArray *matchArr = [self.viewContext executeFetchRequest:request error:&error];
@@ -368,6 +380,13 @@
     [self fetchAllDatas];
 }
 
+- (void)save{
+    if (_useNewCoreDataStack) {
+        [[ASDFDataBaseHelper shareInstance] saveContext];
+    }else{
+        [[CoreDataStack shareInstance] saveContext];
+    }
+}
 
 #pragma mark -观察者回调
 - (void)observeValueForKeyPath:(NSString *)keyPath

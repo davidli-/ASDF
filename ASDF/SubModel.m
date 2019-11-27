@@ -18,4 +18,11 @@
     return newSubModel;
 }
 
+- (id)mutableCopyWithZone:(NSZone *)zone{
+    SubModel *newSubModel = [super mutableCopyWithZone:zone];
+    newSubModel.subName = [self.subName mutableCopy];
+    
+    return newSubModel;
+}
+
 @end

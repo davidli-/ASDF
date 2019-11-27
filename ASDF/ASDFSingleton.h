@@ -19,6 +19,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface ASDFSingleton : NSObject
 + (instancetype)shareInstance;
+- (void)instanceMethod;
 @end
 
 NS_ASSUME_NONNULL_END

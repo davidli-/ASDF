@@ -14,7 +14,7 @@
 {
     NSLog(@"++++call Model copyWithZone~");
     Model *newModel = [[[self class] allocWithZone:zone] init];
-    newModel.name = self.name;
+    newModel.name = [self.name copy];
     return newModel;
 }
 
@@ -22,7 +22,7 @@
 {
     NSLog(@"++++call Model mutableCopyWithZone~");
     Model *newModel = [[[self class] allocWithZone:zone] init];
-    newModel.name = self.name;
+    newModel.name = [self.name mutableCopy];
 
     return newModel;
 }

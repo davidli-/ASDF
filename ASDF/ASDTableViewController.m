@@ -66,7 +66,7 @@ static NSString *kIdentifier = @"cell";
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    /*参考：https://blog.csdn.net/youngsblog/article/details/44536143*/
+    /*参考：https://blog.csdn.net/youngsblog/article/details/44536143 */
     //方式1：使用此方式初始化cell时，不需要注册cell，但需要自己判断cell为空的情况；为空时使用自定义的方法创建cell；
     ASDTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kIdentifier];
     if (!cell) {
