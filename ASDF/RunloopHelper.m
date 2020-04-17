@@ -63,7 +63,7 @@ void DoNothingRunLoopCallback()
             //添加输入事件
             CFRunLoopSourceSignal(_mSourceRef);
             //唤醒线程，线程唤醒后发现由事件需要处理，于是立即处理事件
-            CFRunLoopWakeUp(_mRunLoopRef);
+            CFRunLoopWakeUp(_mRunLoopRef); // 在主线程中唤醒其他子线程的runloop。
         }else {
             NSLog(@"RunLoop正在处理事件+++");
             //添加输入事件，当前正在处理一个事件，当前事件处理完成后，立即处理当前新输入的事件

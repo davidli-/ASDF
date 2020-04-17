@@ -57,6 +57,7 @@
 		0A61E3262301B7E400A939D8 /* CoreDataStack.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A61E3252301B7E400A939D8 /* CoreDataStack.m */; };
 		0A68206821A448E100687A8C /* Folder reference in Resources */ = {isa = PBXBuildFile; fileRef = 0A68206721A448E100687A8C /* Folder reference */; };
 		0A6D450D21CCE4EE00257A42 /* ASDFThreadHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A6D450C21CCE4EE00257A42 /* ASDFThreadHelper.m */; };
+		0A722E862449B26B00AB32A8 /* RevealServer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A722E852449B26B00AB32A8 /* RevealServer.framework */; };
 		0A72E3F12289A86D00B8F13A /* ASDTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A72E3F02289A86D00B8F13A /* ASDTableViewCell.m */; };
 		0A72E3F42289AE7500B8F13A /* ASDTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A72E3F32289AE7500B8F13A /* ASDTableViewController.m */; };
 		0A744EAE22DA55370019BEA1 /* ASDLockTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A744EAD22DA55370019BEA1 /* ASDLockTool.m */; };
@@ -250,6 +251,7 @@
 		0A68206721A448E100687A8C /* Folder reference */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "Folder reference"; sourceTree = SOURCE_ROOT; };
 		0A6D450B21CCE4EE00257A42 /* ASDFThreadHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ASDFThreadHelper.h; sourceTree = "<group>"; };
 		0A6D450C21CCE4EE00257A42 /* ASDFThreadHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ASDFThreadHelper.m; sourceTree = "<group>"; };
+		0A722E852449B26B00AB32A8 /* RevealServer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RevealServer.framework; sourceTree = "<group>"; };
 		0A72E3EF2289A86D00B8F13A /* ASDTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ASDTableViewCell.h; sourceTree = "<group>"; };
 		0A72E3F02289A86D00B8F13A /* ASDTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ASDTableViewCell.m; sourceTree = "<group>"; };
 		0A72E3F22289AE7500B8F13A /* ASDTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ASDTableViewController.h; sourceTree = "<group>"; };
@@ -444,6 +446,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A722E862449B26B00AB32A8 /* RevealServer.framework in Frameworks */,
 				B843D418BD690479B1C28ECF /* Pods_ASDF.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -871,6 +874,7 @@
 		0A9BF5971F274683008C5F70 = {
 			isa = PBXGroup;
 			children = (
+				0A722E852449B26B00AB32A8 /* RevealServer.framework */,
 				0A9BF5A21F274683008C5F70 /* ASDF */,
 				0A3B47B621A83F5800EED7A7 /* ASDFTests */,
 				0A3B47C421A8542400EED7A7 /* ASDFUITests */,
@@ -1274,6 +1278,7 @@
 				0A9BF59D1F274683008C5F70 /* Frameworks */,
 				0A9BF59E1F274683008C5F70 /* Resources */,
 				7CA08C49A864E3CD8F8E3785 /* [CP] Embed Pods Frameworks */,
+				0A722E872449B31F00AB32A8 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -1384,6 +1389,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		0A722E872449B31F00AB32A8 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nexport REVEAL_SERVER_FILENAME=\"RevealServer.framework\"\n\n# Update this path to point to the location of RevealServer.framework in your project.\nexport REVEAL_SERVER_PATH=\"${SRCROOT}/${REVEAL_SERVER_FILENAME}\"\n\n# If configuration is not Debug, skip this script.\n[ \"${CONFIGURATION}\" != \"Debug\" ] && exit 0\n\n# If RevealServer.framework exists at the specified path, run code signing script.\nif [ -d \"${REVEAL_SERVER_PATH}\" ]; then\n\"${REVEAL_SERVER_PATH}/Scripts/copy_and_codesign_revealserver.sh\"\nelse\necho \"Reveal Server not loaded: RevealServer.framework could not be found.\"\nfi\n";
+		};
 		5512EE61C00E8713838CE328 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1851,10 +1873,82 @@
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = D7FS892R5K;
 				ENABLE_STRICT_OBJC_MSGSEND = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PREFIX_HEADER = $PROJECT_DIR/ASDF/PrefixHeader.pch;
 				INFOPLIST_FILE = ASDF/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"c++\"",
+					"-l\"sqlite3\"",
+					"-l\"z\"",
+					"-framework",
+					"\"AVFoundation\"",
+					"-framework",
+					"\"Accelerate\"",
+					"-framework",
+					"\"AssetsLibrary\"",
+					"-framework",
+					"\"AsyncDisplayKit\"",
+					"-framework",
+					"\"BeeHive\"",
+					"-framework",
+					"\"CTMediator\"",
+					"-framework",
+					"\"CoreFoundation\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"CoreImage\"",
+					"-framework",
+					"\"CoreLocation\"",
+					"-framework",
+					"\"CoreMedia\"",
+					"-framework",
+					"\"CoreText\"",
+					"-framework",
+					"\"DaKit\"",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"ImageIO\"",
+					"-framework",
+					"\"MapKit\"",
+					"-framework",
+					"\"Masonry\"",
+					"-framework",
+					"\"MobileCoreServices\"",
+					"-framework",
+					"\"PINCache\"",
+					"-framework",
+					"\"PINOperation\"",
+					"-framework",
+					"\"PINRemoteImage\"",
+					"-framework",
+					"\"Photos\"",
+					"-framework",
+					"\"QuartzCore\"",
+					"-framework",
+					"\"ReactiveObjC\"",
+					"-framework",
+					"\"SDWebImage\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-framework",
+					"\"UIKit\"",
+					"-framework",
+					"\"YYKit\"",
+					"-weak_framework",
+					"\"UIKit\"",
+					"-ObjC",
+					"-weak_framework",
+					RevealServer,
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = David.ASDF;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "ASDF/ASDF-Bridging-Header.h";
@@ -1875,6 +1969,10 @@
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = D7FS892R5K;
 				ENABLE_STRICT_OBJC_MSGSEND = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PREFIX_HEADER = $PROJECT_DIR/ASDF/PrefixHeader.pch;
 				INFOPLIST_FILE = ASDF/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
@@ -1942,6 +2040,10 @@
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = D7FS892R5K;
 				ENABLE_STRICT_OBJC_MSGSEND = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PREFIX_HEADER = $PROJECT_DIR/ASDF/PrefixHeader.pch;
 				INFOPLIST_FILE = ASDF/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;

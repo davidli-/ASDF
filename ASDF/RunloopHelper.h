@@ -11,7 +11,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface RunloopHelper : NSObject
-
+- (void)customInputsource;
 @end
 
 NS_ASSUME_NONNULL_END

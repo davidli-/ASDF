@@ -8,7 +8,7 @@
 
 #import "AppDelegate.h"
 #import <UserNotifications/UserNotifications.h>
-#import "MattASPagerViewController.h"
+#import "MattASXViewController.h"
 
 @interface AppDelegate()<UNUserNotificationCenterDelegate>
 
@@ -33,7 +33,7 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 //        NSURLCache;
 //        CAShapeLayer;
     
-    MattASPagerViewController *vc = [[MattASPagerViewController alloc] init];
+    MattASXViewController *vc = [[MattASXViewController alloc] init];
     ASNavigationController *navicontroller = [[ASNavigationController alloc] initWithRootViewController:vc];
     navicontroller.navigationBar.translucent = NO;
     self.window.rootViewController = navicontroller;
