@@ -7,8 +7,9 @@
 //
 
 #import "MattASXViewController.h"
+#import <POP.h>
 
-@interface MattASXViewController ()
+@interface MattASXViewController ()<POPAnimationDelegate>
 @property (nonatomic, strong) ASDisplayNode *displayNode;
 @property (nonatomic, strong) ASImageNode *imgNode;
 @property (nonatomic, strong) ASTextNode *textNode;
@@ -24,6 +25,12 @@
     _textNode = [[ASTextNode alloc] init];
     _textNode.attributedText = [[NSAttributedString alloc] initWithString:@"Hello AS~"
                                                                attributes:@{NSForegroundColorAttributeName: [UIColor blackColor],NSFontAttributeName: [UIFont systemFontOfSize:15]}];
+    [_textNode addTarget:self action:@selector(onClickedText) forControlEvents:ASControlNodeEventTouchUpInside];
+    [_imgNode addTarget:self action:@selector(touchDown:) forControlEvents:ASControlNodeEventTouchDown];
+
+    // 添加手势
+    UIPanGestureRecognizer *recognizer = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(handlePan:)];
+    [_imgNode.view addGestureRecognizer:recognizer];
     
     self = [super initWithNode:_displayNode];
     if (self) {
@@ -60,4 +67,44 @@
     [super viewWillLayoutSubviews];
 }
 
+//MARK:  Gestures
+- (void)touchDown:(UIControl *)sender {
+    [sender.layer pop_removeAllAnimations];
+}
+
+- (void)handlePan:(UIPanGestureRecognizer *)recognizer {
+    // 拖拽
+    CGPoint translation = [recognizer translationInView:self.view];
+    recognizer.view.center = CGPointMake(recognizer.view.center.x + translation.x,
+                                     recognizer.view.center.y + translation.y);
+    [recognizer setTranslation:CGPointMake(0, 0) inView:self.view];
+
+    // 拖拽动作结束
+    if(recognizer.state == UIGestureRecognizerStateEnded)
+    {
+        // 计算出移动的速度
+        CGPoint velocity = [recognizer velocityInView:self.view];
+
+        // 衰退减速动画
+        POPDecayAnimation *positionAnimation = [POPDecayAnimation animationWithPropertyNamed:kPOPLayerPosition];
+
+        // 设置代理
+        positionAnimation.delegate = self;
+
+        // 设置速度动画
+        positionAnimation.velocity = [NSValue valueWithCGPoint:velocity];
+
+        // 添加动画
+        [recognizer.view.layer pop_addAnimation:positionAnimation forKey:@"layerPositionAnimation"];
+    }
+}
+
+
+- (void)onClickedText{
+    // 执行Spring动画
+    POPSpringAnimation *anim = [POPSpringAnimation animationWithPropertyNamed:kPOPLayerScaleXY];
+    anim.toValue             = [NSValue valueWithCGPoint:CGPointMake(1.5f, 1.5f)];
+    anim.springSpeed         = 0.f;
+    [_textNode.layer pop_addAnimation:anim forKey:@"ScaleXY"];
+}
 @end

@@ -18,6 +18,7 @@ PODS:
   - PINRemoteImage/PINCache (3.0.0-beta.13):
     - PINCache (= 3.0.1-beta.6)
     - PINRemoteImage/Core
+  - pop (1.0.12)
   - ReactiveObjC (3.1.0)
   - SDWebImage (4.4.3):
     - SDWebImage/Core (= 4.4.3)
@@ -51,6 +52,7 @@ DEPENDENCIES:
   - CTMediator
   - DaKit
   - Masonry
+  - pop (~> 1.0.12)
   - ReactiveObjC (~> 3.1.0)
   - SDWebImage (~> 4.4.1)
   - Texture (~> 2.8.1)
@@ -58,19 +60,19 @@ DEPENDENCIES:
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
+    - BeeHive
     - CTMediator
     - Masonry
-    - ReactiveObjC
-    - SDWebImage
-    - YYKit
-  https://github.com/davidli-/davidlii.git:
-    - DaKit
-  trunk:
-    - BeeHive
     - PINCache
     - PINOperation
     - PINRemoteImage
+    - pop
+    - ReactiveObjC
+    - SDWebImage
     - Texture
+    - YYKit
+  https://github.com/davidli-/davidlii.git:
+    - DaKit
 
 SPEC CHECKSUMS:
   BeeHive: 64c01ddec33b9ef8813701e075eeb732327d0f75
@@ -80,11 +82,12 @@ SPEC CHECKSUMS:
   PINCache: d195fdba255283f7e9900a55e3cced377f431f9b
   PINOperation: 24b774353ca248fcf87d67b2d61eef42087c125a
   PINRemoteImage: d6d51c5d2adda55f1ce30c96e850b6c4ebd2856a
+  pop: d582054913807fd11fd50bfe6a539d91c7e1a55a
   ReactiveObjC: 2a38ea15335de4119d8b17caf1db1484f61db902
   SDWebImage: c5594f1a19c48d526d321e548902b56b479cd508
   Texture: 8ecf6984065a1e54f06bf97b349ecca28582acd7
   YYKit: 7cda43304a8dc3696c449041e2cb3107b4e236e7
 
-PODFILE CHECKSUM: c1fbd33dacfaa433ebf563a59755eda107f50045
+PODFILE CHECKSUM: 652c3a70f8cdc2a4b8686346f36085d5532a4b48
 
-COCOAPODS: 1.8.4
+COCOAPODS: 1.9.1

@@ -1,3 +1,5 @@
+source 'https://github.com/CocoaPods/Specs.git'
+platform :ios, '10.0'
 use_frameworks!
 
 target 'ASDF' do
@@ -8,6 +10,7 @@ target 'ASDF' do
     pod 'CTMediator'
     pod 'Texture', '~> 2.8.1'
     pod 'BeeHive', '~> 1.6.0'
+    pod 'pop', '~> 1.0.12'
 
 # 指定私有库的远程索引库地址
 #   pod 'DaKit', :source => 'https://github.com/davidli-/davidlii.git'
